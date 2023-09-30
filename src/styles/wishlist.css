@@ -1,0 +1,9 @@
+.wishlist-container {
+  position: fixed;
+  right: 0;
+  top: 85px;
+  bottom: 0;
+  width: 550px;
+  background-color: rgb(230, 229, 229);
+  border-left: 1px solid black;
+}
