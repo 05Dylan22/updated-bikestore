@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { imagesIcons } from "../App"
 import Wishlist from "../elements/wishlist"
 
-const Home = ({wishlistOpen, openCloseWishlist}) => {
+const Home = () => {
   const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
 
   function fillHeart () {
@@ -33,8 +33,7 @@ const Home = ({wishlistOpen, openCloseWishlist}) => {
 
   return (
     <>
-      {largeScreen ? <LargeHeader openCloseWishlist={openCloseWishlist} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
-      {wishlistOpen && <Wishlist/>}
+      {largeScreen ? <LargeHeader fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
     </>
   )
 }

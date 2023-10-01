@@ -22,19 +22,10 @@ function App() {
   //I think i can make this function work for all header elements
   //using just two or maybe three states
   //I worked it out last night ill
-  function openCloseWishlist () {
-    if (wishlistOpen) {
-      fillHeart()
-      setWishlistOpen(false)
-      return
-    }
-    setWishlistOpen(true)
-    return
-  }
 
   return (
     <div className="App">
-      <Home wishlistOpen={wishlistOpen} openCloseWishlist={openCloseWishlist} />
+      <Home wishlistOpen={wishlistOpen} />
       {/* <Wishlist/> */}
     </div>
   );

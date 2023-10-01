@@ -1,19 +1,19 @@
 import { imagesIcons } from "../App"
 import MiddleHeader from "./middleHeader"
 
-const LargeHeader = ({fillHeart, emptyHeart, heartHover, openCloseWishlist}) => {
+const LargeHeader = ({fillHeart, emptyHeart, heartHover}) => {
   imagesIcons.heartOutline = heartHover
 
 
 
   return (
     <header className="large-header">
-      <img alt="business logo" className="large-logo" src={imagesIcons.logo}/>
+      <img onClick={handleIconClick} alt="business logo" className="large-logo" src={imagesIcons.logo}/>
       <MiddleHeader/>
-      <img alt="search icon" className="large-search-icon" src={imagesIcons.searchIcon}/>
-      <img onClick={openCloseWishlist} onMouseLeave={emptyHeart} onMouseOver={fillHeart} alt="heart icon outline" className="large-wishlist-icon" src={imagesIcons.heartOutline}/>
-      <img alt="profile icon" className="large-profile-icon" src={imagesIcons.profileIcon}/>
-      <img alt="cart icon" className="large-cart-icon" src={imagesIcons.cartIcon}/>
+      <img onClick={handleIconClick} alt="search icon" className="large-search-icon" src={imagesIcons.searchIcon}/>
+      <img onClick={handleIconClick} onMouseLeave={emptyHeart} onMouseOver={fillHeart} alt="heart icon outline" className="large-wishlist-icon" src={imagesIcons.heartOutline}/>
+      <img onClick={handleIconClick} alt="profile icon" className="large-profile-icon" src={imagesIcons.profileIcon}/>
+      <img onClick={handleIconClick} alt="cart icon" className="large-cart-icon" src={imagesIcons.cartIcon}/>
     </header>
   )
 }
