@@ -1,6 +1,6 @@
 import LargeHeader from "../elements/largeHeader"
 import SmallHeader from "../elements/smallHeader"
-import { useState, useEffect, useReducer } from "react"
+import { useState, useEffect } from "react"
 import { imagesIcons } from "../App"
 import Wishlist from "../elements/wishlist"
 

@@ -18,8 +18,10 @@ const LargeHeader = ({fillHeart, emptyHeart, heartHover, openIcon, closeIconDisp
       setOpen(false)
       setCurrentOpen(null)
     }
-    setCurrentOpen(icon)
-    openIcon(icon)
+    if (open && icon !== currentOpen) {
+      setCurrentOpen(icon)
+      openIcon(icon)
+    }
   }
 
   return (

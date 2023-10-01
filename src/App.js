@@ -2,8 +2,6 @@ import './App.css';
 import "./styles/largeHeader.css"
 import "./styles/smallHeader.css"
 import "./styles/wishlist.css"
-import Wishlist from './elements/wishlist';
-import { useState } from 'react';
 import Home from './pages/home';
 
 export const imagesIcons = {
@@ -16,17 +14,9 @@ export const imagesIcons = {
 }
 
 function App() {
-  const [wishlistOpen, setWishlistOpen] = useState(false)
-
-  //this is going to require a state for every header element
-  //I think i can make this function work for all header elements
-  //using just two or maybe three states
-  //I worked it out last night ill
-
   return (
     <div className="App">
-      <Home wishlistOpen={wishlistOpen} />
-      {/* <Wishlist/> */}
+      <Home />
     </div>
   );
 }
