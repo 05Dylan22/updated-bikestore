@@ -35,19 +35,19 @@ const Home = () => {
   function openIcon (icon) {
     switch (icon) {
       case "logo":
-        setDisplayIconEl(<Wishlist/>)
+        setDisplayIconEl(<Wishlist items={[]} />)
         break
       case "wishlist":
-        setDisplayIconEl(<Wishlist/>)
+        setDisplayIconEl(<Wishlist items={[]} />)
         break
       case "profile":
-        setDisplayIconEl(<Wishlist/>)
+        setDisplayIconEl(<Wishlist items={[]} />)
         break
       case "cart":
-        setDisplayIconEl(<Wishlist/>)
+        setDisplayIconEl(<Wishlist items={[]} />)
         break
       case "search":
-        setDisplayIconEl(<Wishlist/>)
+        setDisplayIconEl(<Wishlist items={[]} />)
         break
       default:
         console.log("default")

@@ -1,8 +1,11 @@
-const Wishlist = () => {
+import FilledWishlist from "./filledWishlist"
+import EmptyWishlist from "./emptyWishlist"
+
+const Wishlist = (items = []) => {
   return (
-    <div className="wishlist-container">
-      Hello
-    </div>
+    <>
+      {items.length > 1 ? <FilledWishlist items={items} /> : <EmptyWishlist/>}
+    </>
   )
 }
 
