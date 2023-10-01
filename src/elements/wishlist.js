@@ -1,10 +1,10 @@
 import FilledWishlist from "./filledWishlist"
 import EmptyWishlist from "./emptyWishlist"
 
-const Wishlist = (items = []) => {
+const Wishlist = ({ items }) => {
   return (
     <>
-      {items.length > 1 ? <FilledWishlist items={items} /> : <EmptyWishlist/>}
+      {items.length > 0 ? <FilledWishlist items={items} /> : <EmptyWishlist/>}
     </>
   )
 }

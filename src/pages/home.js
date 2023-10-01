@@ -38,7 +38,11 @@ const Home = () => {
         setDisplayIconEl(<Wishlist items={[]} />)
         break
       case "wishlist":
-        setDisplayIconEl(<Wishlist items={[]} />)
+        setDisplayIconEl(<Wishlist items={[{
+          name: "bike",
+          price: 799.99,
+          key: "abc"
+        }]} />)
         break
       case "profile":
         setDisplayIconEl(<Wishlist items={[]} />)

@@ -1,7 +1,9 @@
-const FilledWishlist = () => {
+import WishlistItem from "./wishlistItem"
+
+const FilledWishlist = ({ items }) => {
   return (
     <div className="wishlist-container">
-      Wishlist Filled
+      {items.map(item => <WishlistItem key={item.key} name={item.name} price={item.price}/>)}
     </div>
   )
 }
