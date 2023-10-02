@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useState } from "react"
 
 const MiddleHeader = () => {
   const subMountain = [
@@ -203,13 +203,18 @@ const MiddleHeader = () => {
 
   const [isHovering, setIsHovering] = useState(false)
   const [hoverDiv, setHoverDiv] = useState(null)
+  const [currentHover, setCurrentHover] = useState(null)
 
   function mouseEntered (e, list) {
+    if (e.target !== currentHover) {currentHover.classList.remove("large-header-links-class-hover")}
     setIsHovering(true)
+    e.target.classList.add("large-header-links-class-hover")
+    setCurrentHover(e.target)
     setHoverDiv(<HoverContent list={list}/>)
   }
 
   function mouseLeft (e) {
+    currentHover.classList.remove("large-header-links-class-hover")
     setIsHovering(false)
   }
 
