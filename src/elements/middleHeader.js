@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 const MiddleHeader = () => {
   const middleLinks = [
     {
@@ -33,6 +31,13 @@ const MiddleHeader = () => {
     }
   ]
 
+  const subMountain = []
+  const subRoad = []
+  const subBMX = []
+  const subParts = []
+  const subApparel = []
+  const subAccessories = []
+
   function handleHover (e) {
     e.target.nextElementSibling.classList = "large-middle-links-hover"
   }
@@ -55,7 +60,9 @@ const MiddleHeader = () => {
       return (
         <div key={link.key} className="large-links-div">
           <p onMouseLeave={(e) => {mouseLeave(e)}} onMouseOver={(e) => {handleHover(e)}} className="large-header-links">{link.text}</p>
-          <div onMouseLeave={(e) => {mouseLeaveDropdown(e)}} onMouseOver={(e) => {handleHoverDropdown(e)}} className="none">Hover</div>
+          <div onMouseLeave={(e) => {mouseLeaveDropdown(e)}} onMouseOver={(e) => {handleHoverDropdown(e)}} className="none">
+
+          </div>
         </div>
       )
     })}
