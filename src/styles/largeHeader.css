@@ -51,6 +51,11 @@
   color: white;
 }
 
+.large-header-links-class-hover {
+  background-color: black;
+  color: white;
+}
+
 @media screen and (min-width: 1200px) {
   .large-header-links {
     max-width: 115px;
@@ -71,6 +76,8 @@
   position: absolute;
   left: 5vw;
   right: 5vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   bottom: -201px;
   width: 90vw;
   height: 200px;
