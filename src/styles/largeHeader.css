@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: space-around;
   transition: transform 0.35s, opacity .8s;
+  position: relative;
 }
 
 .large-profile-icon, .large-search-icon, .large-cart-icon, .large-wishlist-icon {
@@ -30,6 +31,10 @@
   height: 100%;
 }
 
+.large-links-div {
+  height: 100%;
+}
+
 .large-header-links {
   cursor: pointer;
   height: 100%;
@@ -38,6 +43,7 @@
   justify-content: center;
   font-weight: bold;
   transition: all 0.15s;
+  margin: 0;
 }
 
 .large-header-links:hover {
@@ -59,4 +65,21 @@
     min-width: 125px;
     font-size: 20px;
   }
+}
+
+.large-middle-links-hover {
+  position: absolute;
+  left: 5vw;
+  right: 5vw;
+  bottom: -201px;
+  width: 90vw;
+  height: 200px;
+  background-color: lightgray;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.none {
+  display: none;
 }
