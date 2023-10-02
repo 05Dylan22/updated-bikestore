@@ -206,7 +206,7 @@ const MiddleHeader = () => {
   const [currentHover, setCurrentHover] = useState(null)
 
   function mouseEntered (e, list) {
-    if (e.target !== currentHover) {currentHover.classList.remove("large-header-links-class-hover")}
+    if (e.target !== currentHover && currentHover) {currentHover.classList.remove("large-header-links-class-hover")}
     setIsHovering(true)
     e.target.classList.add("large-header-links-class-hover")
     setCurrentHover(e.target)
