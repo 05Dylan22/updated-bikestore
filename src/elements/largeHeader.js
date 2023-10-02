@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { imagesIcons } from "../App"
 import MiddleHeader from "./middleHeader"
+import { Link } from "react-router-dom"
 
 const LargeHeader = ({fillHeart, emptyHeart, heartHover, openIcon, closeIconDisplay}) => {
   imagesIcons.heartOutline = heartHover
@@ -26,7 +27,9 @@ const LargeHeader = ({fillHeart, emptyHeart, heartHover, openIcon, closeIconDisp
 
   return (
     <header className="large-header">
-      <img onClick={() => handleIconClick("logo")} alt="business logo" className="large-logo" src={imagesIcons.logo}/>
+      <Link to="/">
+        <img alt="business logo" className="large-logo" src={imagesIcons.logo}/>
+      </Link>
       <MiddleHeader/>
       <img onClick={() => handleIconClick("search")} alt="search icon" className="large-search-icon" src={imagesIcons.searchIcon}/>
       <img onClick={() => handleIconClick("wishlist")} onMouseLeave={emptyHeart} onMouseOver={fillHeart} alt="heart icon outline" className="large-wishlist-icon" src={imagesIcons.heartOutline}/>

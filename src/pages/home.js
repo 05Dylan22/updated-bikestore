@@ -36,9 +36,6 @@ const Home = () => {
 
   function openIcon (icon) {
     switch (icon) {
-      case "logo":
-        setDisplayIconEl(<Wishlist items={[]} />)
-        break
       case "wishlist":
         setDisplayIconEl(<Wishlist items={[{
           name: "bike",

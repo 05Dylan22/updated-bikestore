@@ -3,6 +3,7 @@ import "./styles/largeHeader.css"
 import "./styles/smallHeader.css"
 import "./styles/wishlist.css"
 import Home from './pages/home';
+import { Route, Routes } from 'react-router-dom';
 
 export const imagesIcons = {
   heartOutline: require("./images+icons/heart.png"),
@@ -16,7 +17,9 @@ export const imagesIcons = {
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
     </div>
   );
 }
