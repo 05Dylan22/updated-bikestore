@@ -3,6 +3,8 @@ import SmallHeader from "../elements/smallHeader"
 import { useState, useEffect } from "react"
 import { imagesIcons } from "../App"
 import Wishlist from "../elements/wishlist"
+import Profile from "../elements/profile"
+import Cart from "../elements/cart"
 
 const Home = () => {
   const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
@@ -45,10 +47,10 @@ const Home = () => {
         }]} />)
         break
       case "profile":
-        setDisplayIconEl(<Wishlist items={[]} />)
+        setDisplayIconEl(<Profile/>)
         break
       case "cart":
-        setDisplayIconEl(<Wishlist items={[]} />)
+        setDisplayIconEl(<Cart/>)
         break
       case "search":
         setDisplayIconEl(<Wishlist items={[]} />)
