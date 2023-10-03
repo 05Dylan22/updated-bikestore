@@ -17,12 +17,46 @@
   background-color: lightgray;
   width: 100%;
   height: 400px;
+  overflow: hidden;
   position: relative;
 }
 
-.profile-collage-img {
-  width: 100px;
-  height: 100px;
+.profile-collage-img2 {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+}
+
+.profile-collage-img1 {
+  width: 350px;
+  height: 375px;
+  left: -50px;
+  position: absolute;
+}
+
+.profile-close-x {
+  width: 30px;
+  height: 50px;
+  border: 1px solid black;
+  font-size: 30px;
+  margin: 0;
+  position: absolute;
+  top: -25px;
+  right: -15px;
+  z-index: 100;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: all 0.15s;
+}
+
+.profile-close-x:hover {
+  background-color: black;
+  color: white;
 }
 
 .wave {
