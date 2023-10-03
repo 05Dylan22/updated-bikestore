@@ -1,29 +1,9 @@
-import { useState } from "react"
 import { imagesIcons } from "../App"
 import MiddleHeader from "./middleHeader"
 import { Link } from "react-router-dom"
 
-const LargeHeader = ({fillHeart, emptyHeart, heartHover, openIcon, closeIconDisplay}) => {
+const LargeHeader = ({fillHeart, emptyHeart, heartHover, handleIconClick}) => {
   imagesIcons.heartOutline = heartHover
-  const [open, setOpen] = useState(false)
-  const [currentOpen, setCurrentOpen] = useState(null)
-
-  function handleIconClick (icon) {
-    if (!open) {
-      openIcon(icon)
-      setOpen(true)
-      setCurrentOpen(icon)
-    }
-    if (open && icon === currentOpen) {
-      closeIconDisplay()
-      setOpen(false)
-      setCurrentOpen(null)
-    }
-    if (open && icon !== currentOpen) {
-      setCurrentOpen(icon)
-      openIcon(icon)
-    }
-  }
 
   return (
     <header className="large-header">

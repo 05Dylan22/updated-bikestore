@@ -9,6 +9,8 @@ import Cart from "../elements/cart"
 const Home = () => {
   const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
   const [displayIconEl, setDisplayIconEl] = useState()
+  const [open, setOpen] = useState(false)
+  const [currentOpen, setCurrentOpen] = useState(null)
 
   function fillHeart () {
     setHeartHover(imagesIcons.solidHeart)
@@ -44,7 +46,7 @@ const Home = () => {
         }]} />)
         break
       case "profile":
-        setDisplayIconEl(<Profile closeDisplay={closeIconDisplay}/>)
+        setDisplayIconEl(<Profile handleIconClick={handleIconClick}/>)
         break
       case "cart":
         setDisplayIconEl(<Cart/>)
@@ -61,9 +63,31 @@ const Home = () => {
     setDisplayIconEl(null)
   }
 
+  function handleIconClick (icon, fromPofile = false) {
+    if (fromPofile) {
+      closeIconDisplay()
+      setOpen(false)
+      setCurrentOpen(null)
+    }
+    if (!open && !fromPofile) {
+      openIcon(icon)
+      setOpen(true)
+      setCurrentOpen(icon)
+    }
+    if ((open && icon === currentOpen) && !fromPofile) {
+      closeIconDisplay()
+      setOpen(false)
+      setCurrentOpen(null)
+    }
+    if ((open && icon !== currentOpen) && !fromPofile) {
+      setCurrentOpen(icon)
+      openIcon(icon)
+    }
+  }
+
   return (
     <>
-      {largeScreen ? <LargeHeader closeIconDisplay={closeIconDisplay} openIcon={openIcon} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
+      {largeScreen ? <LargeHeader handleIconClick={handleIconClick} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
       {displayIconEl}
     </>
   )

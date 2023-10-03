@@ -63,6 +63,7 @@
   margin: 0;
   position: absolute;
   top: -25px;
+  cursor: pointer;
   right: -15px;
   z-index: 100;
   background-color: white;
