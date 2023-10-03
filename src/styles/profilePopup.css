@@ -3,14 +3,33 @@
   right: calc(50% - 325px);
   bottom: 0;
   width: 650px;
-  height: 500px;
+  height: 75vh;
   background-color: white;
   border: none;
   border-bottom: none;
   border-radius: 4px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  overflow-y: scroll;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15), -1px -1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.profile-wrapper {
+  position: relative;
+  position: fixed;
+  right: calc(50% - 325px);
+  bottom: 0;
+  width: 650px;
+  height: 75vh;
+}
+
+.profile-container::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 0px;
+}
+
+.testing {
+  margin-top: 200px;
 }
 
 .profile-top-sect {
@@ -77,4 +96,20 @@
 
 .wave .shape-fill {
   fill: #FFFFFF;
+}
+
+@media screen and (min-width: 270px) {
+  
+}
+
+@media screen and (min-width: 350px) {
+  
+}
+
+@media screen and (min-width: 500px) {
+  
+}
+
+@media screen and (min-width: 9000px) {
+  
 }
