@@ -1,9 +1,9 @@
 import "../styles/profilePopup.css"
 
-const Profile = () => {
+const Profile = ({closeDisplay}) => {
   return (
     <div className="profile-wrapper">
-      <p className="profile-close-x">X</p>
+      <p onClick={closeDisplay} className="profile-close-x">X</p>
       <div className="profile-container">
         <div className="profile-top-sect">
           <img className="profile-collage-img1" src={require("../images+icons/profile-collageimg.jpg")} alt="Mountain Biker riding downhill" />

@@ -44,7 +44,7 @@ const Home = () => {
         }]} />)
         break
       case "profile":
-        setDisplayIconEl(<Profile/>)
+        setDisplayIconEl(<Profile closeDisplay={closeIconDisplay}/>)
         break
       case "cart":
         setDisplayIconEl(<Cart/>)
