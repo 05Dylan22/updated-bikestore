@@ -456,12 +456,14 @@
   .checkbox {
     height: 22px;
     width: 22px;
+    margin-left: 6px;
   }
 
   .login-btn {
     height: 46px;
     width: 90%;
     font-size: 18px;
+    margin-left: 12px;
   }
 
   .login-arrow {
