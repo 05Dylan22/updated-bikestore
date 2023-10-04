@@ -11,7 +11,23 @@
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   overflow-y: scroll;
+  scrollbar-gutter: none;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.15), -1px -1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.profile-container::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+  padding: 2px 0;
+}
+
+.profile-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.profile-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: rgb(116, 116, 116);
 }
 
 .profile-wrapper {
@@ -23,17 +39,12 @@
   height: 75vh;
 }
 
-.profile-container::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 0px;
-}
-
 .testing {
   margin-top: 200px;
 }
 
 .profile-top-sect {
-  background-color: lightgray;
+  background: linear-gradient(130deg, lightgray, rgb(37, 37, 37));
   width: 100%;
   height: 400px;
   overflow: hidden;
@@ -97,6 +108,144 @@
 
 .wave .shape-fill {
   fill: #FFFFFF;
+}
+
+.profile-heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 12px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.profile-subhead {
+  font-size: 15px;
+  margin-top: 12px;
+  margin-left: 12px;
+  font-weight: 400;
+  margin-bottom: 26px;
+}
+
+.profile-sign-up-p {
+  margin-bottom: 12px;
+  margin-left: 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.quick-login-icons {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.signin-icons {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+  margin-top: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.signin-icons:hover {
+  background-color: rgb(227, 227, 227);
+  transform: scale(1.05);
+}
+
+.profile-input {
+  height: 42px;
+  width: 90%;
+  margin-top: 36px;
+  margin-left: 12px;
+  font-size: 15px;
+  padding-left: 12px;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+.profile-input:last-child {
+  margin-top: 18px;
+}
+
+.checkbox-div {
+  display: flex;
+  justify-content: left;
+  margin-top: 12px;
+  margin-left: 8px;
+}
+
+.checkbox {
+  appearance: none;
+  height: 22px;
+  width: 22px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  --webkit-appearance: none;
+  height: 22px;
+  width: 22px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-image: url(../images+icons/checkmark.png);
+  background-size: contain;
+}
+
+.checkbox + label {
+  margin-left: 10px;
+  padding-top: 2px;
+  font-size: 14px;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  text-align: left;
+  color: black;
+  font-weight: 600;
+  height: 46px;
+  margin: auto;
+  margin-top: 26px;
+  width: 90%;
+  font-size: 18px;
+  padding-left: 12px;
+  border: 1px solid black;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px rgba(0, 0 ,0, 0.4);
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  color: white;
+  background-color: black;
+}
+
+.continue-txt {
+  text-decoration: underline;
+}
+
+.login-arrow {
+  font-size: 52px;
+  text-decoration: none;
+  margin-bottom: 8px;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.legal-txt {
+  font-size: 12px;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 24px;
 }
 
 @media screen and (min-width: 270px) {

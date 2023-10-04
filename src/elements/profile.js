@@ -14,9 +14,35 @@ const Profile = ({handleIconClick}) => {
             </svg>
           </div>
         </div>
-        <div className="testing">
-          helloooo
+        <p className="profile-heading">Sign Up For Exclusive Deals</p>
+        <p className="profile-subhead">Get access to deals on your favorite items PLUS free shipping on all purchases!</p>
+        <p className="profile-sign-up-p">Log In or Sign Up (It's free!)</p>
+        <div className="quick-login-icons">
+            <img className="signin-icons" src={require("../images+icons/google-icon.png")} alt="google logo"/>
+            <img className="signin-icons" src={require("../images+icons/apple-icon.png")} alt="apple logo"/>
+            <img className="signin-icons" src={require("../images+icons/facebook-icon.png")} alt="facebook logo"/>
+            <img className="signin-icons" src={require("../images+icons/yahoo-icon.png")} alt="yahoo logo"/>
         </div>
+        <input type="email" className="profile-input" placeholder="EMAIL ADDRESS"/>
+        <input type="text" className="profile-input" placeholder="PASSWORD"/>
+        <div className="checkbox-div">
+          <input title="checkbox" type="checkbox" className="checkbox" defaultChecked/>
+          <label htmlFor="checkbox">Keep me logged in</label>
+        </div>
+        <button className="login-btn">
+          <p className="continue-txt">Continue</p>
+          <p className="login-arrow">	&rarr;</p>
+        </button>
+        <p className="legal-txt">
+            Sign me up to the Everything Bikes Community, featuring exclusive Everything Bikes offers and news.
+            By clicking the “Continue” button, you are joining our community, will
+            receive emails with the latest news and updates, and agree to the
+            TERMS OF USE and community TERMS AND CONDITIONS and acknowledge you
+            have read the EVERYTHING BIKES PRIVACY POLICY. If you are a New York resident,
+            the Everything Bikes membership may be considered a financial incentive. Please
+            see the Financial Incentives section of our NEW YORK PRIVACY NOTICE
+            for details.
+          </p>
       </div>
     </div>
   )
