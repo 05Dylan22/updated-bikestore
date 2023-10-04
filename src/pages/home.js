@@ -87,7 +87,7 @@ const Home = () => {
 
   return (
     <>
-      {largeScreen ? <LargeHeader handleIconClick={handleIconClick} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
+      {largeScreen ? <LargeHeader handleIconClick={handleIconClick} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader handleIconClick={handleIconClick} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
       {displayIconEl}
     </>
   )
