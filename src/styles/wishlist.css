@@ -4,6 +4,50 @@
   top: 85px;
   bottom: 0;
   width: 550px;
-  background-color: rgb(230, 229, 229);
   border-left: 1px solid black;
+}
+
+.wishlist-item {
+  border: 1px solid black;
+  border-radius: 6px;
+  margin: auto;
+  height: 150px;
+  width: 80%;
+  margin-top: 26px;
+  margin-bottom: 26px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+}
+
+.wishlist-item-img {
+  width: 25%;
+  height: 125px;
+}
+
+.item-info {
+  width: 65%;
+}
+
+.wishlist-item-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.wishlist-item-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+}
+
+.wishlist-item-price {
+  text-align: end;
+  font-style: italic;
+  font-weight: 600;
 }
