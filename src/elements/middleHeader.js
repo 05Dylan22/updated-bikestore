@@ -162,7 +162,6 @@ const MiddleHeader = () => {
       key: "recre"
     }
   ]
-
   const middleLinks = [
     {
       text: "Road",
@@ -214,6 +213,7 @@ const MiddleHeader = () => {
   }
 
   function mouseLeft (e) {
+    if (!e.target.classList) return
     currentHover.classList.remove("large-header-links-class-hover")
     setIsHovering(false)
   }
