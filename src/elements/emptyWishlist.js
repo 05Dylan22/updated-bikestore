@@ -1,8 +1,8 @@
 const EmptyWishlist = () => {
   return (
     <div className="icon-container">
-      <p className="empty-wishlist-title">My Wishlist</p>
-      <p className="empty-wishlist-count">0 Items In Wishlist</p>
+      <p className="wishlist-title">My Wishlist</p>
+      <p className="wishlist-subtitle">You Have 0 Items In Your Wishlist</p>
     </div>
   )
 }
