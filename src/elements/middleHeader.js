@@ -213,7 +213,7 @@ const MiddleHeader = () => {
   }
 
   function mouseLeft (e) {
-    if (!e.target.classList) return
+    if (currentHover == null) return
     currentHover.classList.remove("large-header-links-class-hover")
     setIsHovering(false)
   }

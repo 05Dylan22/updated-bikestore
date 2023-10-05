@@ -11,7 +11,8 @@ export const imagesIcons = {
   profileIcon: require("./images+icons/user.png"),
   searchIcon: require("./images+icons/search.png"),
   cartIcon: require("./images+icons/trolley.png"),
-  logo: require("./images+icons/logo.png")
+  logo: require("./images+icons/logo.png"),
+  testImg: require("./images+icons/profile-collageimg.jpg")
 }
 
 function App() {

@@ -1,4 +1,5 @@
 const WishlistItem = ({ name, price }) => {
+  //ADD BUTTON TO RIGHT OF PRICE TO ADD TO CART
   return (
     <div className="wishlist-item">
       <img loading="lazy" className="wishlist-item-img" src={require("../images+icons/profile-collageimg2.jpg")} alt="temp" />

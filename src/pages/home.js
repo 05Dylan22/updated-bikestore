@@ -39,13 +39,27 @@ const Home = () => {
   function openIcon (icon) {
     switch (icon) {
       case "wishlist":
-        setDisplayIconEl(<Wishlist items={[]}/>)
+        setDisplayIconEl(<Wishlist items={[
+          {name: "This Is Bike Name This Can Also be long",
+           price: 799.99,
+           quantity: 1,
+           desc: "This is where the product description will go. it will also need cut off at some point cuz it can be long",
+           img: imagesIcons.testImg
+          }
+        ]}/>)
         break
       case "profile":
         setDisplayIconEl(<Profile handleIconClick={handleIconClick}/>)
         break
       case "cart":
-        setDisplayIconEl(<Cart/>)
+        setDisplayIconEl(<Cart items={[
+          {name: "This Is Bike Name This Can Also be long",
+           price: 799.99,
+           quantity: 1,
+           desc: "This is where the product description will go. it will also need cut off at some point cuz it can be long",
+           img: imagesIcons.testImg
+          }
+        ]}/>)
         break
       case "search":
         setDisplayIconEl(<Wishlist items={[]} />)
