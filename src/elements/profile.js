@@ -6,8 +6,8 @@ const Profile = ({handleIconClick}) => {
       <p onClick={() => handleIconClick("profile", true)} className="profile-close-x">X</p>
       <div className="profile-container">
         <div className="profile-top-sect">
-          <img className="profile-collage-img1" src={require("../images+icons/profile-collageimg.jpg")} alt="Mountain Biker riding downhill" />
-          <img className="profile-collage-img2" src={require("../images+icons/profile-collageimg2.jpg")} alt="Road biker riding uphill" />
+          <img loading="lazy" className="profile-collage-img1" src={require("../images+icons/profile-collageimg.jpg")} alt="Mountain Biker riding downhill" />
+          <img loading="lazy" className="profile-collage-img2" src={require("../images+icons/profile-collageimg2.jpg")} alt="Road biker riding uphill" />
           <div className="wave">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
               <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
@@ -18,10 +18,10 @@ const Profile = ({handleIconClick}) => {
         <p className="profile-subhead">Get access to deals on your favorite items PLUS free shipping on all purchases!</p>
         <p className="profile-sign-up-p">Log In or Sign Up (It's free!)</p>
         <div className="quick-login-icons">
-            <img className="signin-icons" src={require("../images+icons/google-icon.png")} alt="google logo"/>
-            <img className="signin-icons" src={require("../images+icons/apple-icon.png")} alt="apple logo"/>
-            <img className="signin-icons" src={require("../images+icons/facebook-icon.png")} alt="facebook logo"/>
-            <img className="signin-icons" src={require("../images+icons/yahoo-icon.png")} alt="yahoo logo"/>
+            <img loading="lazy" className="signin-icons" src={require("../images+icons/google-icon.png")} alt="google logo"/>
+            <img loading="lazy" className="signin-icons" src={require("../images+icons/apple-icon.png")} alt="apple logo"/>
+            <img loading="lazy" className="signin-icons" src={require("../images+icons/facebook-icon.png")} alt="facebook logo"/>
+            <img loading="lazy" className="signin-icons" src={require("../images+icons/yahoo-icon.png")} alt="yahoo logo"/>
         </div>
         <input type="email" className="profile-input" placeholder="EMAIL ADDRESS"/>
         <input type="text" className="profile-input" placeholder="PASSWORD"/>
