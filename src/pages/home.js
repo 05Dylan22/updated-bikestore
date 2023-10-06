@@ -5,6 +5,7 @@ import { imagesIcons } from "../App"
 import Wishlist from "../elements/wishlist"
 import Profile from "../elements/profile"
 import Cart from "../elements/cart"
+import SearchPage from "../elements/searchPage"
 
 const Home = () => {
   const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
@@ -53,10 +54,18 @@ const Home = () => {
         setDisplayIconEl(<Profile handleIconClick={handleIconClick}/>)
         break
       case "cart":
-        setDisplayIconEl(<Cart items={[]}/>)
+        setDisplayIconEl(<Cart items={[
+          {name: "This Is Bike Name This Can Also be long",
+           price: 799.99,
+           key: "Bike Item",
+           quantity: 1,
+           desc: "This is where the product description will go. it will also need cut off at some point cuz it can be longerthan",
+           img: imagesIcons.testImg
+          }
+        ]}/>)
         break
       case "search":
-        setDisplayIconEl(<Wishlist items={[]} />)
+        setDisplayIconEl(<SearchPage/>)
         break
       default:
         console.log("default")

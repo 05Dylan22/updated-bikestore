@@ -1,0 +1,25 @@
+.search-input-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 60%;
+  height: 36px;
+  border-radius: 150px;
+  border: 1px solid black;
+  padding-left: 12px;
+  margin-top: 36px;
+  font-size: 14px;
+  padding-right: 6px;
+}
+
+.search-bar::-webkit-search-cancel-button {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-image: url(../images+icons/search.cancel.icon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
