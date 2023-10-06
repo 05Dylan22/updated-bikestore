@@ -42,8 +42,9 @@ const Home = () => {
         setDisplayIconEl(<Wishlist items={[
           {name: "This Is Bike Name This Can Also be long",
            price: 799.99,
+           key: "Bike Item",
            quantity: 1,
-           desc: "This is where the product description will go. it will also need cut off at some point cuz it can be long",
+           desc: "This is where the product description will go. it will also need cut off at some point cuz it can be longerthan",
            img: imagesIcons.testImg
           }
         ]}/>)
@@ -52,14 +53,7 @@ const Home = () => {
         setDisplayIconEl(<Profile handleIconClick={handleIconClick}/>)
         break
       case "cart":
-        setDisplayIconEl(<Cart items={[
-          {name: "This Is Bike Name This Can Also be long",
-           price: 799.99,
-           quantity: 1,
-           desc: "This is where the product description will go. it will also need cut off at some point cuz it can be long",
-           img: imagesIcons.testImg
-          }
-        ]}/>)
+        setDisplayIconEl(<Cart items={[]}/>)
         break
       case "search":
         setDisplayIconEl(<Wishlist items={[]} />)
