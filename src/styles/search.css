@@ -6,14 +6,13 @@
 }
 
 .search-bar {
-  width: 60%;
-  height: 36px;
   border-radius: 150px;
   border: 1px solid black;
   padding-left: 12px;
+  padding-right: 6px;
+  height: 36px;
   margin-top: 36px;
   font-size: 14px;
-  padding-right: 6px;
 }
 
 .search-bar::-webkit-search-cancel-button {
@@ -28,21 +27,19 @@
 .search-list-div {
   width: 100%;
   display: flex;
-  justify-content: center;
 }
 
 .search-list {
   display: grid;
-  width: 65%;
   justify-content: start;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .search-list-item {
   list-style: none;
   background-color: rgb(244, 244, 244);
-  width: 320px;
-  height: 32px;
-  padding-top: 5px;
+  padding-left: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -50,4 +47,39 @@
 
 .search-list-item:nth-child(2n) {
   background-color: white;
+}
+
+@media screen and (min-width: 270px) {
+  .search-bar {
+    width: 90%;
+    max-width: 330px;
+  }
+
+  .search-list-item {
+    width: 80vw;
+    height: 32px;
+    padding-top: 5px;
+    margin-left: 0;
+    max-width: 320px;
+  }
+
+  .search-list-div {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  .search-bar {
+    width: 60%;
+  }
+
+  .search-list-item {
+    width: 320px;
+    height: 32px;
+    padding-top: 5px;
+  }
+
+  .search-list-div {
+    justify-content: center;
+  }
 }

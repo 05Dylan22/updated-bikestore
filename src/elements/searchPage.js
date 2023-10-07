@@ -8,6 +8,7 @@ const SearchPage = () => {
       </div>
       <div className="search-list-div">
         <ul className="search-list">
+          <li className="search-list-item">This is our most sold bike</li>
         </ul>
       </div>
     </div>
