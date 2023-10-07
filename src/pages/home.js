@@ -6,6 +6,7 @@ import Wishlist from "../elements/wishlist"
 import Profile from "../elements/profile"
 import Cart from "../elements/cart"
 import SearchPage from "../elements/searchPage"
+import HamburgerMenus from "../elements/hamburgerMenus"
 
 const Home = () => {
   const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
@@ -66,6 +67,9 @@ const Home = () => {
         break
       case "search":
         setDisplayIconEl(<SearchPage/>)
+        break
+      case "hamburger":
+        setDisplayIconEl(<HamburgerMenus/>)
         break
       default:
         console.log("default")

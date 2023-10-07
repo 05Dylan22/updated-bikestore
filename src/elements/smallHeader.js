@@ -4,7 +4,7 @@ import { imagesIcons } from "../App"
 const SmallHeader = ({handleIconClick}) => {
   return (
     <header className="small-header">
-      <HamburgerMenu />
+      <HamburgerMenu handleIconClick={handleIconClick}/>
       <img onClick={() => {handleIconClick("wishlist")}} alt="heart icon outline" className="small-wishlist-icon" src={imagesIcons.heartOutline}/>
       <img alt="business logo" className="small-logo" src={imagesIcons.logo}/>
       <img onClick={() => {handleIconClick("search")}} alt="search icon" className="small-search-icon" src={imagesIcons.searchIcon}/>
