@@ -235,7 +235,7 @@ const MiddleHeader = () => {
 const HoverContent = ({ list }) => {
   return (
     <div className="large-middle-links-hover">
-      {list.map(item => <h1 key={item.key}>{item.text}</h1>)}
+      {list.map(item => <p className="links-inside-hover" key={item.key}>{item.text}</p>)}
     </div>
   )
 }
