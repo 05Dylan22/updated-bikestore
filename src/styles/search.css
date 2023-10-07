@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 
 .search-bar {
@@ -22,4 +23,31 @@
   background-image: url(../images+icons/search.cancel.icon.png);
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.search-list-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-list {
+  display: grid;
+  width: 65%;
+  justify-content: start;
+}
+
+.search-list-item {
+  list-style: none;
+  background-color: rgb(244, 244, 244);
+  width: 320px;
+  height: 32px;
+  padding-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-list-item:nth-child(2n) {
+  background-color: white;
 }

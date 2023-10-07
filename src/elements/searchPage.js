@@ -4,11 +4,12 @@ const SearchPage = () => {
   return (
     <div className="icon-container">
       <div className="search-input-container">
-        <input className="search-bar" type="search" placeholder="Search..."/>
+        <input autoFocus className="search-bar" type="search" placeholder="Search..."/>
       </div>
-      <ul className="search-list">
-        <li className="search-list-item">This Is A Bike</li>
-      </ul>
+      <div className="search-list-div">
+        <ul className="search-list">
+        </ul>
+      </div>
     </div>
   )
 }
