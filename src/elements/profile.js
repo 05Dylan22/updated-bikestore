@@ -2,7 +2,7 @@ import "../styles/profilePopup.css"
 
 const Profile = ({dispatch}) => {
   return (
-    <div className="profile-wrapper">
+    <section className="profile-wrapper">
       <p onClick={() => dispatch({payload: {identifier: "PROFILE"}})} className="profile-close-x">X</p>
       <div className="profile-container">
         <div className="profile-top-sect">
@@ -44,7 +44,7 @@ const Profile = ({dispatch}) => {
             for details.
           </p>
       </div>
-    </div>
+    </section>
   )
 }
 

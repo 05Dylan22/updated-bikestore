@@ -2,6 +2,7 @@ import LargeHeader from "../elements/largeHeader"
 import SmallHeader from "../elements/smallHeader"
 import { useState, useEffect, useReducer } from "react"
 import { imagesIcons } from "../App"
+import "../styles/home.css"
 
 const Home = () => {
   const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
@@ -46,6 +47,13 @@ const Home = () => {
   return (
     <>
       {largeScreen ? <LargeHeader dispatch={dispatch} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader dispatch={dispatch} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
+      <section className="hero-home">
+        <div className="hero-content-div">
+          <h1 className="home-hero-heading">Bikes Built To Release Your True Potential</h1>
+          <h2 className="home-hero-subhead">All our bikes and products have been carefully designed to give you the best experience on and off the trails or roads.</h2>
+          <button className="home-hero-cta">Start Shopping</button>
+        </div>
+      </section>
       {state.displayIconEl}
     </>
   )
