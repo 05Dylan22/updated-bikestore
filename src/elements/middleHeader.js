@@ -1,167 +1,173 @@
 import { useState } from "react"
 
+export const subMountain = [
+  {
+    text: "Full Suspension",
+    key: "full"
+  },
+
+  {
+    text: "Hardtail",
+    key: "hard"
+  },
+
+  {
+    text: "Cross Country",
+    key: "cross"
+  },
+
+  {
+    text: "Trail",
+    key: "trail"
+  },
+
+  {
+    text: "Enduro",
+    key: "enduro"
+  },
+
+  {
+    text: "Downhill",
+    key: "down"
+  },
+
+  {
+    text: "Fat Bikes",
+    key: "fat"
+  }
+]
+
+export const subRoad = [
+  {
+    text: "Performance",
+    key: "perf"
+  },
+
+  {
+    text: "Gravel",
+    key: "grav"
+  },
+
+  {
+    text: "Triathelon",
+    key: "triath"
+  }
+]
+
+export const subParts = [
+  {
+    text: "Wheels, Tires, Tubes",
+    key: "wtt"
+  },
+
+  {
+    text: "Road Wheels",
+    key: "rw"
+  },
+
+  {
+    text: "Mountain Wheels",
+    key: "mw"
+  },
+
+  {
+    text: "Road Tires",
+    key: "rt"
+  },
+
+  {
+    text: "Mountain Tires",
+    key: "mt"
+  },
+
+  {
+    text: "Gravel Tires",
+    key: "gt"
+  },
+
+  {
+    text: "City Tires",
+    key: "ct"
+  },
+
+  {
+    text: "Tubes",
+    key: "tubes"
+  },
+
+  {
+    text: "Tubeless Accessories",
+    key: "ta"
+  }
+]
+
+export const subApparel = [
+  {
+    text: "Pants",
+    key: "pants"
+  },
+
+  {
+    text: "Jackets",
+    key: "jackets"
+  },
+
+  {
+    text: "Helmets",
+    key: "helmets"
+  },
+
+  {
+    text: "Shoes",
+    key: "shoes"
+  }
+]
+
+export const subAccessories = [
+  {
+    text: "Pumps",
+    key: "pumps"
+  },
+
+  {
+    text: "Locks",
+    key: "locks"
+  },
+
+  {
+    text: "Bike Racks",
+    key: "Bracks"
+  },
+
+  {
+    text: "Car Racks",
+    key: "Cracks"
+  },
+
+  {
+    text: "Bike Storage",
+    key: "storage"
+  }
+]
+
+export const subElectric = [
+  {
+    text: "City & Hybrid",
+    key: "city"
+  },
+
+  {
+    text: "Commuter",
+    key: "commute"
+  },
+
+  {
+    text: "Recreation",
+    key: "recre"
+  }
+]
+
 const MiddleHeader = () => {
-  const subMountain = [
-    {
-      text: "Full Suspension",
-      key: "full"
-    },
-
-    {
-      text: "Hardtail",
-      key: "hard"
-    },
-
-    {
-      text: "Cross Country",
-      key: "cross"
-    },
-
-    {
-      text: "Trail",
-      key: "trail"
-    },
-
-    {
-      text: "Enduro",
-      key: "enduro"
-    },
-
-    {
-      text: "Downhill",
-      key: "down"
-    },
-
-    {
-      text: "Fat Bikes",
-      key: "fat"
-    }
-  ]
-  const subRoad = [
-    {
-      text: "Performance",
-      key: "perf"
-    },
-
-    {
-      text: "Gravel",
-      key: "grav"
-    },
-
-    {
-      text: "Triathelon",
-      key: "triath"
-    }
-  ]
-  const subParts = [
-    {
-      text: "Wheels, Tires, Tubes",
-      key: "wtt"
-    },
-
-    {
-      text: "Road Wheels",
-      key: "rw"
-    },
-
-    {
-      text: "Mountain Wheels",
-      key: "mw"
-    },
-
-    {
-      text: "Road Tires",
-      key: "rt"
-    },
-
-    {
-      text: "Mountain Tires",
-      key: "mt"
-    },
-
-    {
-      text: "Gravel Tires",
-      key: "gt"
-    },
-
-    {
-      text: "City Tires",
-      key: "ct"
-    },
-
-    {
-      text: "Tubes",
-      key: "tubes"
-    },
-
-    {
-      text: "Tubeless Accessories",
-      key: "ta"
-    }
-  ]
-  const subApparel = [
-    {
-      text: "Pants",
-      key: "pants"
-    },
-
-    {
-      text: "Jackets",
-      key: "jackets"
-    },
-
-    {
-      text: "Helmets",
-      key: "helmets"
-    },
-
-    {
-      text: "Shoes",
-      key: "shoes"
-    }
-  ]
-  const subAccessories = [
-    {
-      text: "Pumps",
-      key: "pumps"
-    },
-
-    {
-      text: "Locks",
-      key: "locks"
-    },
-
-    {
-      text: "Bike Racks",
-      key: "Bracks"
-    },
-
-    {
-      text: "Car Racks",
-      key: "Cracks"
-    },
-
-    {
-      text: "Bike Storage",
-      key: "storage"
-    }
-  ]
-  const subElectric = [
-    {
-      text: "City & Hybrid",
-      key: "city"
-    },
-
-    {
-      text: "Commuter",
-      key: "commute"
-    },
-
-    {
-      text: "Recreation",
-      key: "recre"
-    }
-  ]
   const middleLinks = [
     {
       text: "Road",

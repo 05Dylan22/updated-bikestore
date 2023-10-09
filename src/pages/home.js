@@ -1,18 +1,11 @@
 import LargeHeader from "../elements/largeHeader"
 import SmallHeader from "../elements/smallHeader"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useReducer } from "react"
 import { imagesIcons } from "../App"
-import Wishlist from "../elements/wishlist"
-import Profile from "../elements/profile"
-import Cart from "../elements/cart"
-import SearchPage from "../elements/searchPage"
-import HamburgerMenus from "../elements/hamburgerMenus"
 
 const Home = () => {
   const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
-  const [displayIconEl, setDisplayIconEl] = useState()
-  const [open, setOpen] = useState(false)
-  const [currentOpen, setCurrentOpen] = useState(null)
+  const [state, dispatch] = useReducer(reducer, {open: false, currentOpen: null, displayIconEl: null})
 
   function fillHeart () {
     setHeartHover(imagesIcons.solidHeart)
@@ -38,74 +31,22 @@ const Home = () => {
 
   window.addEventListener("resize", checkScreenSize)
 
-  function openIcon (icon) {
-    switch (icon) {
-      case "wishlist":
-        setDisplayIconEl(<Wishlist items={[
-          {name: "This Is Bike Name This Can Also be long",
-           price: 799.99,
-           key: "Bike Item",
-           quantity: 1,
-           desc: "This is where the product description will go. it will also need cut off at some point cuz it can be longerthan",
-           img: imagesIcons.testImg
-          }
-        ]}/>)
-        break
-      case "profile":
-        setDisplayIconEl(<Profile handleIconClick={handleIconClick}/>)
-        break
-      case "cart":
-        setDisplayIconEl(<Cart items={[
-          {name: "This Is Bike Name This Can Also be long",
-           price: 799.99,
-           key: "Bike Item",
-           quantity: 1,
-           desc: "This is where the product description will go. it will also need cut off at some point cuz it can be longerthan",
-           img: imagesIcons.testImg
-          }
-        ]}/>)
-        break
-      case "search":
-        setDisplayIconEl(<SearchPage/>)
-        break
-      case "hamburger":
-        setDisplayIconEl(<HamburgerMenus/>)
-        break
-      default:
-        console.log("default")
+  function reducer (state, action) {
+    if (!state.open) {
+      return {open: true, currentOpen: action.payload.identifier, displayIconEl: action.payload.component}
     }
-  }
-
-  function closeIconDisplay (icon) {
-    setDisplayIconEl(null)
-  }
-
-  function handleIconClick (icon, fromPofile = false) {
-    if (fromPofile) {
-      closeIconDisplay()
-      setOpen(false)
-      setCurrentOpen(null)
+    if (state.open && state.currentOpen === action.payload.identifier) {
+      return {open: false, currentOpen: null, displayIconEl: null}
     }
-    if (!open && !fromPofile) {
-      openIcon(icon)
-      setOpen(true)
-      setCurrentOpen(icon)
-    }
-    if ((open && icon === currentOpen) && !fromPofile) {
-      closeIconDisplay()
-      setOpen(false)
-      setCurrentOpen(null)
-    }
-    if ((open && icon !== currentOpen) && !fromPofile) {
-      setCurrentOpen(icon)
-      openIcon(icon)
+    if (state.open && state.currentOpen !== action.payload.identifier) {
+      return {...state, currentOpen: action.payload.identifier, displayIconEl: action.payload.component}
     }
   }
 
   return (
     <>
-      {largeScreen ? <LargeHeader handleIconClick={handleIconClick} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader handleIconClick={handleIconClick} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
-      {displayIconEl}
+      {largeScreen ? <LargeHeader dispatch={dispatch} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader dispatch={dispatch} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
+      {state.displayIconEl}
     </>
   )
 }

@@ -1,9 +1,9 @@
 import "../styles/profilePopup.css"
 
-const Profile = ({handleIconClick}) => {
+const Profile = ({dispatch}) => {
   return (
     <div className="profile-wrapper">
-      <p onClick={() => handleIconClick("profile", true)} className="profile-close-x">X</p>
+      <p onClick={() => dispatch({payload: {identifier: "PROFILE"}})} className="profile-close-x">X</p>
       <div className="profile-container">
         <div className="profile-top-sect">
           <img loading="lazy" className="profile-collage-img1" src={require("../images+icons/profile-collageimg.jpg")} alt="Mountain Biker riding downhill" />
