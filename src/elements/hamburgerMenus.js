@@ -34,6 +34,10 @@ const HamburgerMenus = ({dispatch}) => {
         <p onClick={() => hamburgCategoryClick(subApparel)} className="menu-main-section-p">Apparel<span>&gt;</span></p>
       </div>
       : <div className="hamburger-menus-container">
+          <div className="top-hamburger">
+            <img className="hamburger-logo" src={imagesIcons.logo} alt="logo" />
+            <img onClick={() => setIsSubCategory(false)} className="subcategory-goback" src={require("../images+icons/back-arrow.png")} alt="close menu" />
+          </div>
         {subCategory}
       </div>
       }

@@ -9,8 +9,12 @@
 }
 
 .close-hamburger {
-  height: 20px;
-  width: 20px;
+  float: right;
+  margin-right: 16px;
+  margin-top: -20px;
+}
+
+.subcategory-goback {
   float: right;
   margin-right: 16px;
   margin-top: -20px;
@@ -63,6 +67,33 @@
     height: 64px;
     display: block;
     margin: auto;
+  }
+
+  .close-hamburger {
+    height: 20px;
+    width: 20px;
+  }
+
+  .subcategory-goback {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .hamburger-logo {
+    height: 76px;
+    max-width: 302px;
+  }
+
+  .close-hamburger {
+    height: 25px;
+    width: 25px;
+  }
+
+  .subcategory-goback {
+    height: 30px;
+    width: 30px;
   }
 }
 
