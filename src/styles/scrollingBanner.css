@@ -1,0 +1,45 @@
+.overflow-protection {
+  width: 100vw;
+  margin: auto;
+  height: max-content;
+  margin-top: 54px;
+  overflow: hidden;
+  background-color: rgba(82, 82, 82, 0.6);
+  margin-bottom: 54px;
+}
+
+.scrolling-banner {
+  height: 36px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  background-color: rgba(82, 82, 82, 0.6);
+  width: calc(220px * 14);
+  align-items: center;
+  overflow: hidden;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-214px * 7));
+  }
+}
+/* 189 */
+.banner-logo, .cbs, .tall {
+  margin: 4px 22px;
+  height: 95px;
+  width: 170px;
+}
+
+.cbs {
+  height: 175px;
+  width: 170px;
+}
+
+.tall {
+  height: 35px;
+}

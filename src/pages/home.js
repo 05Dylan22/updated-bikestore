@@ -3,6 +3,7 @@ import SmallHeader from "../elements/smallHeader"
 import { useState, useEffect, useReducer } from "react"
 import { imagesIcons } from "../App"
 import "../styles/home.css"
+import ScrollingBanner from "../elements/scrollingBanner"
 
 const Home = () => {
   const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
@@ -54,6 +55,7 @@ const Home = () => {
           <button className="home-hero-cta">Start Shopping</button>
         </div>
       </section>
+      <ScrollingBanner/>
       {state.displayIconEl}
     </>
   )
