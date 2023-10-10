@@ -4,6 +4,7 @@ import { useState, useEffect, useReducer } from "react"
 import { imagesIcons } from "../App"
 import "../styles/home.css"
 import ScrollingBanner from "../elements/scrollingBanner"
+import ShopPopular from "../elements/shopPopular"
 
 const Home = () => {
   const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
@@ -46,7 +47,7 @@ const Home = () => {
   }
 
   return (
-    <>
+    <section className="home-page">
       {largeScreen ? <LargeHeader dispatch={dispatch} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader dispatch={dispatch} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
       <section className="hero-home">
         <div className="hero-content-div">
@@ -56,8 +57,9 @@ const Home = () => {
         </div>
       </section>
       <ScrollingBanner/>
+      <ShopPopular/>
       {state.displayIconEl}
-    </>
+    </section>
   )
 }
 

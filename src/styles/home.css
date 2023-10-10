@@ -1,3 +1,7 @@
+.home-page {
+  overflow-x: hidden;
+}
+
 .hero-home {
   background-image: url(../images+icons/heroImg.jpg);
   background-position: center;
@@ -42,6 +46,56 @@
   outline-color: rgb(51, 51, 51);
 }
 
+.shop-pop-title {
+  text-align: center;
+}
+
+.popular-section {
+  border: 1px solid black;
+  margin: auto;
+  margin-bottom: 18px;
+  display: flex;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+  align-items: center;
+}
+
+.popular-section > p {
+  color: white;
+  font-weight: bold;
+  border: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.pop1, .pop2, .pop3, .pop4 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pop1 {
+  background-image: url(https://th.bing.com/th/id/R.80a9aa030be6332d5b026eb7029cf448?rik=u52uCDzXaNzmdQ&riu=http%3a%2f%2ftrailaddiction.com%2fwp-content%2fuploads%2f2014%2f04%2fDownhill-Mountain-Biking-Holiday-France-7.jpg&ehk=lBDqdwNhK%2bCqLbJO7cIe5usUrOmgWbDaDK29Z5cg6gs%3d&risl=&pid=ImgRaw&r=0);
+}
+
+.pop2 {
+  background-image: url(https://i.pinimg.com/originals/6a/9f/98/6a9f983a3ff4bc0845361e5facc5c9db.jpg);
+}
+
+.pop3 {
+  background-image: url(https://ep1.pinkbike.org/p4pb5300714/p4pb5300714.jpg);
+}
+
+.pop4 {
+  background-image: url(https://th.bing.com/th/id/OIP.JlnJop76pgL5xJ4KYjRXgAHaFj?pid=ImgDet&rs=1);
+}
+
 @media screen and (min-width: 270px) {
   .hero-home {
     height: 450px;
@@ -65,6 +119,33 @@
     height: 32px;
     font-size: 16px;
   }
+
+  .shop-pop-title {
+    font-size: 28px;
+  }
+
+  .popular-section {
+    height: 100px;
+    width: 95vw;
+  }
+
+  .popular-section > p {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .popular-section {
+    height: 145px;
+    max-height: 175px;
+    max-width: 550px;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .shop-pop-title {
+    font-size: 32px;
+  }
 }
 
 @media screen and (min-width: 500px) {
@@ -87,6 +168,10 @@
 @media screen and (min-width: 630px) {
   .hero-content-div {
     margin-left: 32px;
+  }
+
+  .shop-pop-title {
+    font-size: 45px;
   }
 }
 
@@ -118,5 +203,14 @@
     font-size: 20px;
     width: 255px;
     height: 38px;
+  }
+
+  .popular-section {
+    height: 175px;
+    width: 550px;
+  }
+
+  .popular-section > p {
+    font-size: 24px;
   }
 }
