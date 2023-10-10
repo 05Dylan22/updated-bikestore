@@ -1,6 +1,9 @@
 import "../styles/profilePopup.css"
+import { useContext } from "react"
+import DataContext from "../context/DataContext"
 
-const Profile = ({dispatch}) => {
+const Profile = () => {
+  const {dispatch} = useContext(DataContext)
   return (
     <section className="profile-wrapper">
       <p onClick={() => dispatch({payload: {identifier: "PROFILE"}})} className="profile-close-x">X</p>

@@ -1,15 +1,16 @@
 import LargeHeader from "../elements/largeHeader"
 import SmallHeader from "../elements/smallHeader"
-import { useState, useEffect, useReducer } from "react"
+import { useState, useEffect, useContext } from "react"
 import { imagesIcons } from "../App"
 import "../styles/home.css"
 import ScrollingBanner from "../elements/scrollingBanner"
 import ShopPopular from "../elements/shopPopular"
 import BlogPost from "../elements/blogPost"
+import DataContext from "../context/DataContext"
 
 const Home = () => {
   const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
-  const [state, dispatch] = useReducer(reducer, {open: false, currentOpen: null, displayIconEl: null})
+  const {state} = useContext(DataContext)
 
   function fillHeart () {
     setHeartHover(imagesIcons.solidHeart)
@@ -35,21 +36,9 @@ const Home = () => {
 
   window.addEventListener("resize", checkScreenSize)
 
-  function reducer (state, action) {
-    if (!state.open) {
-      return {open: true, currentOpen: action.payload.identifier, displayIconEl: action.payload.component}
-    }
-    if (state.open && state.currentOpen === action.payload.identifier) {
-      return {open: false, currentOpen: null, displayIconEl: null}
-    }
-    if (state.open && state.currentOpen !== action.payload.identifier) {
-      return {...state, currentOpen: action.payload.identifier, displayIconEl: action.payload.component}
-    }
-  }
-
   return (
     <section className="home-page">
-      {largeScreen ? <LargeHeader dispatch={dispatch} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader dispatch={dispatch} fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
+      {largeScreen ? <LargeHeader fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
       <section className="hero-home">
         <div className="hero-content-div">
           <h1 className="home-hero-heading">Bikes Built To Release Your True Potential</h1>

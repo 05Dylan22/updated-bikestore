@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useReducer } from "react";
 
 const DataContext = createContext({})
 
@@ -23,3 +23,5 @@ export const DataProvider = ({children}) => {
     </DataContext.Provider>
   )
 }
+
+export default DataContext
