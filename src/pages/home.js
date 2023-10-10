@@ -5,6 +5,7 @@ import { imagesIcons } from "../App"
 import "../styles/home.css"
 import ScrollingBanner from "../elements/scrollingBanner"
 import ShopPopular from "../elements/shopPopular"
+import BlogPost from "../elements/blogPost"
 
 const Home = () => {
   const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
@@ -58,6 +59,8 @@ const Home = () => {
       </section>
       <ScrollingBanner/>
       <ShopPopular/>
+      <h3>Feautured Blogs</h3>
+      <BlogPost/>
       {state.displayIconEl}
     </section>
   )
