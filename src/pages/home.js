@@ -48,8 +48,10 @@ const Home = () => {
       </section>
       <ScrollingBanner/>
       <ShopPopular/>
-      <h3>Feautured Blogs</h3>
+      <h3 className="blogs-section-title">Feautured Blogs</h3>
       <BlogPost/>
+      <p className="mission-statement-title">Our Mission</p>
+      <p className="mission-statement">At Everything Bikes we aspire to bring quality biking experiences to people just like you world wide. We also teach any newcomers in the world of cycling everything there is to know through our blog and Youtube videos.</p>
       {state.displayIconEl}
     </section>
   )

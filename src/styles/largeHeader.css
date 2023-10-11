@@ -1,8 +1,10 @@
 .large-header {
-  width: 100vw;
   background-color: white;
-  height: 85px;
   position: fixed;
+  height: 85px;
+  top: 0;
+  left: 0;
+  right: 0;
   border-bottom: 1px solid gray;
   z-index: 100;
   box-shadow: 0px 1px 4px rgba(0, 0 ,0, 0.6);
@@ -10,7 +12,6 @@
   align-items: center;
   justify-content: space-around;
   transition: transform 0.35s, opacity .8s;
-  position: relative;
 }
 
 .large-profile-icon, .large-search-icon, .large-cart-icon, .large-wishlist-icon {

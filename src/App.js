@@ -19,11 +19,9 @@ export const imagesIcons = {
 function App() {
   return (
     <div className="App">
-      <DataProvider>
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/' element={<DataProvider><Home/></DataProvider>}/>
         </Routes>
-      </DataProvider>
     </div>
   );
 }
