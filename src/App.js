@@ -22,16 +22,6 @@ export const imagesIcons = {
 }
 
 function App() {
-  const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
-
-  function fillHeart () {
-    setHeartHover(imagesIcons.solidHeart)
-  }
-
-  function emptyHeart () {
-    setHeartHover(imagesIcons.heartOutline)
-  }
-
   const [largeScreen, setLargeScreen] = useState(false)
 
   useEffect(() => {
@@ -51,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <DataProvider>
-        {largeScreen ? <LargeHeader fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
+        {largeScreen ? <LargeHeader/> : <SmallHeader/>}
       </DataProvider>
         <Routes>
           <Route path='/' element={<Home/>}/>

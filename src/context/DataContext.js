@@ -1,4 +1,5 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useState } from "react";
+import { imagesIcons } from "../App";
 
 const DataContext = createContext({})
 
@@ -16,9 +17,17 @@ function reducer (state, action) {
 
 export const DataProvider = ({children}) => {
   const [state, dispatch] = useReducer(reducer, {open: false, currentOpen: null, displayIconEl: null})
+  const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
 
+  function fillHeart () {
+    setHeartHover(imagesIcons.solidHeart)
+  }
+  
+  function emptyHeart () {
+    setHeartHover(imagesIcons.heartOutline)
+  }
   return (
-    <DataContext.Provider value={{dispatch, state}}>
+    <DataContext.Provider value={{dispatch, state, fillHeart, emptyHeart, heartHover}}>
       {children}
     </DataContext.Provider>
   )
