@@ -67,6 +67,10 @@
   margin-top: 74px;
 }
 
+.social-logo {
+  cursor: pointer;
+}
+
 .sitemap {
   margin-top: 64px;
 }
