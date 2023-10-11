@@ -10,7 +10,7 @@ import DataContext from "../context/DataContext"
 
 const LargeHeader = ({fillHeart, emptyHeart, heartHover}) => {
   imagesIcons.heartOutline = heartHover
-  const {dispatch} = useContext(DataContext)
+  const {dispatch, state} = useContext(DataContext)
 
   return (
     <header className="large-header">
@@ -22,6 +22,7 @@ const LargeHeader = ({fillHeart, emptyHeart, heartHover}) => {
       <img onClick={() => dispatch({payload: {identifier: "WISHLIST", component: <Wishlist items={[]}/>}})} onMouseLeave={emptyHeart} onMouseOver={fillHeart} alt="heart icon outline" className="large-wishlist-icon" src={imagesIcons.heartOutline}/>
       <img onClick={() => dispatch({payload: {identifier: "PROFILE", component: <Profile/>}})} alt="profile icon" className="large-profile-icon" src={imagesIcons.profileIcon}/>
       <img onClick={() => dispatch({payload: {identifier: "CART", component: <Cart items={[]}/>}})} alt="cart icon" className="large-cart-icon" src={imagesIcons.cartIcon}/>
+      {state.displayIconEl}
     </header>
   )
 }

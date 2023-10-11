@@ -1,0 +1,245 @@
+.footer {
+  background-color: black;
+  color: white;
+  padding-top: 6px;
+  padding-bottom: 20px;
+}
+
+.newsletter-title {
+  text-align: center;
+  margin-bottom: 4px;
+  margin-top: 12px;
+}
+
+.newsletter-subtitle {
+  text-align: center;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 74px;
+}
+
+.signup-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.newsletter-signup {
+  max-width: 350px;
+  border: 1px solid gray;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  background-color: white;
+  color: black;
+}
+
+.signup-btn {
+  width: 28%;
+  max-width: 150px;
+  border: 1px solid gray;
+  border-left: none;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.signup-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.signup-consent {
+  text-align: center;
+  margin: auto;
+  margin-top: 8px;
+}
+
+.social-links {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 74px;
+}
+
+.sitemap {
+  margin-top: 64px;
+}
+
+.sitemap-section-title {
+  text-decoration: underline;
+  margin-bottom: 8px;
+}
+
+.sitemap-item {
+  margin: 0;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.sitemap-item:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 270px) {
+  .newsletter-title {
+    font-size: 26px;
+  }
+
+  .newsletter-subtitle {
+    font-size: 12px;
+    width: 80vw;
+  }
+
+  .signup-section {
+    height: 30px;
+  }
+
+  .newsletter-signup {
+    height: 100%;
+    width: 50%;
+  }
+
+  .signup-btn {
+    height: 110%;
+  }
+
+  .signup-consent {
+    width: 90%;
+    font-size: 8px;
+  }
+
+  .social-links {
+    width: 75vw;
+  }
+
+  .social-logo {
+    width: 25px;
+    height: 25px;
+  }
+
+  .sitemap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 12px;
+  }
+
+  .sitemap-section-title {
+    font-size: 14px;
+  }
+
+  .sitemap-item {
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 380px) {
+  .signup-consent {
+    width: 90%;
+    font-size: 10px;
+  }
+
+  .social-links {
+    width: 65vw;
+  }
+
+  .sitemap {
+    padding-left: 24px;
+  }
+}
+
+@media screen and (min-width: 460px) {
+  .newsletter-title {
+    font-size: 32px;
+  }
+
+  .newsletter-subtitle {
+    font-size: 14px;
+    width: 80vw;
+  }
+
+  .social-links {
+    width: 55vw;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .sitemap {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .newsletter-signup {
+    height: 30px;
+  }
+
+  .signup-section {
+    height: 32px;
+  }
+
+  .signup-btn {
+    height: 105%;
+  }
+
+  .signup-consent {
+    width: 80%;
+  }
+
+  .social-links {
+    width: 45vw;
+  }
+
+  .social-logo {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (min-width: 730px) {
+  .signup-consent {
+    width: 70%;
+  }
+
+  .social-links {
+    width: 35vw;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .newsletter-title {
+    font-size: 54px;
+  }
+
+  .newsletter-subtitle {
+    font-size: 20px;
+    width: 50vw;
+  }
+
+  .newsletter-signup {
+    height: 34px;
+    width: 70%;
+  }
+
+  .signup-btn {
+    height: 37.5px;
+  }
+
+  .signup-consent {
+    width: 450px;
+  }
+
+  .sitemap-section-title {
+    font-size: 18px;
+  }
+
+  .sitemap-item {
+    font-size: 12px;
+  }
+}

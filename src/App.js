@@ -5,6 +5,11 @@ import "./styles/wishlist.css"
 import Home from './pages/home';
 import { Route, Routes } from 'react-router-dom';
 import {DataProvider} from './context/DataContext';
+import { useState, useEffect } from 'react';
+import LargeHeader from './elements/largeHeader';
+import SmallHeader from './elements/smallHeader';
+import NotFound from './pages/404';
+import Footer from './elements/footer';
 
 export const imagesIcons = {
   heartOutline: require("./images+icons/heart.png"),
@@ -17,11 +22,42 @@ export const imagesIcons = {
 }
 
 function App() {
+  const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
+
+  function fillHeart () {
+    setHeartHover(imagesIcons.solidHeart)
+  }
+
+  function emptyHeart () {
+    setHeartHover(imagesIcons.heartOutline)
+  }
+
+  const [largeScreen, setLargeScreen] = useState(false)
+
+  useEffect(() => {
+    if (window.innerWidth > 1199) setLargeScreen(true)
+  }, [])
+
+  function checkScreenSize () {
+    if (window.innerWidth > 1199) {
+      setLargeScreen(true)
+      return
+    }
+    setLargeScreen(false)
+  }
+
+  window.addEventListener("resize", checkScreenSize)
+
   return (
     <div className="App">
+      <DataProvider>
+        {largeScreen ? <LargeHeader fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/> : <SmallHeader fillHeart={fillHeart} emptyHeart={emptyHeart} heartHover={heartHover}/>}
+      </DataProvider>
         <Routes>
-          <Route path='/' element={<DataProvider><Home/></DataProvider>}/>
+          <Route path='/' element={<Home/>}/>
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
+        <Footer/>
     </div>
   );
 }
