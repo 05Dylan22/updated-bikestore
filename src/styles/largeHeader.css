@@ -1,6 +1,6 @@
 .large-header {
   background-color: white;
-  position: fixed;
+  position: sticky;
   height: 85px;
   top: 0;
   left: 0;

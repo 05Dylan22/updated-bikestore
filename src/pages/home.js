@@ -2,7 +2,6 @@ import "../styles/home.css"
 import ScrollingBanner from "../elements/scrollingBanner"
 import ShopPopular from "../elements/shopPopular"
 import BlogPost from "../elements/blogPost"
-import Footer from "../elements/footer"
 
 const Home = () => {
 
@@ -22,7 +21,6 @@ const Home = () => {
       <BlogPost/>
       <p className="mission-statement-title">Our Mission</p>
       <p className="mission-statement">At Everything Bikes we aspire to bring quality biking experiences to people just like you world wide. We also teach any newcomers in the world of cycling everything there is to know through our blog and Youtube videos.</p>
-      <Footer/>
     </section>
   )
 }
