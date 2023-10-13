@@ -76,6 +76,10 @@
   margin-top: 64px;
 }
 
+.shop-footer {
+  display: grid;
+}
+
 .sitemap-section-title {
   text-decoration: underline;
   margin-bottom: 8px;
@@ -84,6 +88,8 @@
 .sitemap-item {
   margin: 0;
   margin-bottom: 4px;
+  color: white;
+  text-decoration: none;
   cursor: pointer;
 }
 
