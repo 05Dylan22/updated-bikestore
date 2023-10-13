@@ -4,7 +4,9 @@ import ShopPopular from "../elements/shopPopular"
 import BlogPost from "../elements/blogPost"
 
 const Home = () => {
-
+  fetch("http://localhost:5000/?type=hardtail").then(res => res.json()).then((data) => {
+    console.log(data)
+  })
 
   return (
     <section className="home-page">
