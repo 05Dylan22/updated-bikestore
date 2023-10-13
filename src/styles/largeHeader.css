@@ -39,6 +39,8 @@
 .large-header-links {
   cursor: pointer;
   height: 100%;
+  color: black;
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -10,6 +10,7 @@ import LargeHeader from './elements/largeHeader';
 import SmallHeader from './elements/smallHeader';
 import NotFound from './pages/404';
 import Footer from './elements/footer';
+import ShoppingCategory from './pages/shoppingCategory';
 
 export const imagesIcons = {
   heartOutline: require("./images+icons/heart.png"),
@@ -44,7 +45,8 @@ function App() {
         {largeScreen ? <LargeHeader/> : <SmallHeader/>}
       </DataProvider>
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/shoppingCategory" element={<ShoppingCategory/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
         <Footer/>

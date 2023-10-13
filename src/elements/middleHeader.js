@@ -1,4 +1,5 @@
 import { useState } from "react"
+import {Link} from "react-router-dom"
 
 export const subMountain = [
   {
@@ -229,7 +230,7 @@ const MiddleHeader = () => {
     {middleLinks.map((link) => {
       return (
         <div onMouseEnter={(e) => {mouseEntered(e, link.subCat)}} key={link.key} className="large-links-div">
-          <p className="large-header-links">{link.text}</p>
+          <Link state={{category: link.text}} to={"/shoppingCategory"} className="large-header-links">{link.text}</Link>
         </div>
       )
     })}

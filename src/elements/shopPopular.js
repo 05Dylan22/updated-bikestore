@@ -1,19 +1,21 @@
+import {Link} from "react-router-dom"
+
 const ShopPopular = () => {
   return (
     <>
       <h3 className="shop-pop-title">Shop Popular Categories</h3>
-      <div className="popular-section pop1">
+      <Link state={{category: "Downhill"}} to={"/shoppingCategory"} className="popular-section pop1">
         <p>Downhill</p>
-      </div>
-      <div className="popular-section pop2">
+      </Link>
+      <Link state={{category: "Full Suspension"}} to={"/shoppingCategory"} className="popular-section pop2">
         <p>Full Suspension</p>
-      </div>
-      <div className="popular-section pop3">
+      </Link>
+      <Link state={{category: "Cross Country"}} to={"/shoppingCategory"} className="popular-section pop3">
         <p>Cross Country</p>
-      </div>
-      <div className="popular-section pop4">
+      </Link>
+      <Link state={{category: "Trail"}} to={"/shoppingCategory"} className="popular-section pop4">
         <p>Trail</p>
-      </div>
+      </Link>
     </>
   )
 }
