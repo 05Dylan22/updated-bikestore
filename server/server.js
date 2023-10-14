@@ -12,19 +12,11 @@ app.use(express.json())
 app.use(bodyParser.json())
 
 
-function grabData (searchTerm) {
+app.get("/", (req, res) => {
   fs.readFile("./data/data.json", "utf-8", (err, data) => {
     if (err) return err
-    JSON.stringify(data)
-    console.log(data["item"])
-    return data[searchTerm]
+     res.send(data)
   })
-}
-
-grabData("item2")
-
-app.get("/", (req, res) => {
-  res.send("hey")
 })
 
 app.listen(5000, (req, res) => {
