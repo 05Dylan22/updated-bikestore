@@ -4,7 +4,6 @@ import ShoppingSectionHero from "../elements/shopSectionsHero"
 const ShoppingCategory = () => {
   const location = useLocation()
   const {category} = location.state
-  console.log(category)
   return (
     <div>
       <ShoppingSectionHero/>

@@ -1,7 +1,53 @@
 {
-  "data": 
-  {
-    "item": "first Item",
-    "item2": "second Item"
+  "heroData": {
+    "fullSuspensionHero": {
+      "img": "https://i.pinimg.com/originals/6a/9f/98/6a9f983a3ff4bc0845361e5facc5c9db.jpg",
+      "category":"Full Suspension",
+      "description": "Full suspension mountain bikes keep you in control and comfortable over rugged terrain. Suspension solutions have been proven and refined over the years. Active Braking Pivot (ABP) and Mino Link make our full suspension models a class above the competition."
+    },
+
+    "hardtailHero": {
+      "img": "https://th.bing.com/th/id/OIP.Ox_FpoYpNxLujZRVggtmkQHaEs?pid=ImgDet&rs=1",
+      "category": "Hard Tail",
+      "description": "Hardtails are the pure mountain machines. They'll connect you to the trail and get you around the trail quickly and efficiently. They're ideal for cross country and trail riding."
+    },
+
+    "crosscountryHero": {
+      "img": "https://ep1.pinkbike.org/p4pb5300714/p4pb5300714.jpg",
+      "category": "Cross Country",
+      "description": "From cutting-edge carbon race bikes to versatile models made for loads of fun on light trails, our cross country bikes are fast, lightweight, and efficient."
+    },
+
+    "trailHero": {
+      "img": "https://th.bing.com/th/id/OIP.JlnJop76pgL5xJ4KYjRXgAHaFj?pid=ImgDet&rs=1",
+      "category": "Trail",
+      "description": "Trail bikes are versatile, light, and exceedingly capable. They climb just as well as they descend, making them ideal for everything from enduro racing to ripping laps after work."
+    },
+
+    "enduroHero": {
+      "img": "https://www.mtbskiingandfitness.com/wp-content/uploads/2020/09/A-Buyers-Guide-to-Enduro-Mountain-Bikes.jpg",
+      "category": "Enduro",
+      "description": "Enduro pushes the limits of mountain biking, combining the technical capability of downhill with the endurance of a trail ride. Enduro bikes are more than up to the challenge. We've packed everything we know about racing efficiency, suspension, and durability into one blisteringly fast and capable package."
+    },
+
+    "downhillHero": {
+      "img": "https://th.bing.com/th/id/R.80a9aa030be6332d5b026eb7029cf448?rik=u52uCDzXaNzmdQ&riu=http%3a%2f%2ftrailaddiction.com%2fwp-content%2fuploads%2f2014%2f04%2fDownhill-Mountain-Biking-Holiday-France-7.jpg&ehk=lBDqdwNhK%2bCqLbJO7cIe5usUrOmgWbDaDK29Z5cg6gs%3d&risl=&pid=ImgRaw&r=0",
+      "category": "Downhill",
+      "description": "Our downhill bikes are built to go big and shred hard, whether you're ripping a World Cup downhill or charging through the gravity park."
+    },
+
+    "fatHero": {
+      "img": "https://th.bing.com/th/id/OIP.5Cf3xzX3GVHMbb2HsblRFgHaEK?pid=ImgDet&rs=1",
+      "category": "Fat",
+      "description": "Extra-wide fat bike tires let you turn any terrain into your next adventure. All that rubber delivers unbelievable traction and stability no matter where you roam."
+    }
+  },
+
+  "allBikes": {
+
+  },
+
+  "searchTerms": {
+
   }
 }
