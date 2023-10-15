@@ -6,20 +6,24 @@ const ShopSectionHero = () => {
   const [isLoading, setIsLoading] = useState(true)
   const location = useLocation()
   const term = location.state
+
+  async function getData(term) {
+    const data = await fetch("http://localhost:5000/")
+    const response = await data.json()
+    setMyData(response)
+    setIsLoading(false)
+    return
+  }
+
   useEffect(() => {
-    fetch("http://localhost:5000/").then(res => res.json()).then((data) => {
-      setMyData(data)
-      setIsLoading(false)
-    })
-  }, [])
+    getData(term)
+  }, [term])
 
   if (!isLoading) {
     var title = myData.heroData[term].category
     var img = myData.heroData[term].img
     var desc = myData.heroData[term].description
   }
-
-  console.log(term)
 
   return (
     <>
