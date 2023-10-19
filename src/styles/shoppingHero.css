@@ -1,0 +1,139 @@
+.shopping-hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  background-position: center;
+}
+
+.shopping-hero-title {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  border-radius: 200px;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  margin: auto;
+}
+
+.shopping-hero-desc {
+  text-align: center;
+  margin: auto;
+}
+
+.shopping-hero-explore {
+  text-align: center;
+}
+
+.showcase-product-div {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.showcase-img {
+  border-top: 1px solid black;
+  display: block;
+  margin: auto;
+}
+
+.heart-img {
+  position: absolute;
+  z-index: 10;
+  top: 6px;
+  cursor: pointer;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url(../images+icons/heart.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.product-name {
+  text-align: center;
+  margin: 0;
+  width: fit-content;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.price-type {
+  text-align: center;
+  margin: 0;
+  width: fit-content;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.view-product {
+  height: 36px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 300px;
+  border: 2px solid transparent;
+  font-weight: bold;
+  margin-top: 16px;
+  cursor: pointer;
+  width: 350px;
+  margin-bottom: 36px;
+  transition: all 0.15s;
+}
+
+.view-product:hover {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+@media screen and (min-width: 270px) {
+  
+}
+
+@media screen and (min-width: 550px) {
+  
+}
+
+@media screen and (min-width: 900px) {
+  .shopping-hero {
+    height: 500px;
+  }
+
+  .shopping-hero-title {
+    font-size: 54px;
+    width: 700px;
+    height: 250px;
+  }
+
+  .shopping-hero-desc {
+    width: 75vw;
+    font-size: 20px;
+    margin-top: 45px;
+  }
+
+  .shopping-hero-explore {
+    font-size: 42px;
+    margin-top: 54px;
+  }
+
+  .showcase-product-div {
+    margin-top: 42px;
+  }
+
+  .showcase-img {
+    padding-top: 32px;
+    width: 650px;
+    height: 268px;
+  }
+}
