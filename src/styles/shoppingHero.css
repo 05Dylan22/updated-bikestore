@@ -88,7 +88,57 @@
 }
 
 @media screen and (min-width: 270px) {
-  
+  .shopping-hero {
+    height: 380px;
+  }
+
+  .shopping-hero-title {
+    width: 95%;
+    font-size: 28px;
+    height: 100px;
+  }
+
+  .shopping-hero-desc {
+    width: 95vw;
+    font-size: 16px;
+    margin-top: 25px;
+  }
+
+  .shopping-hero-explore {
+    font-size: 22px;
+    margin-top: 22px;
+  }
+
+  .showcase-product-div {
+    margin-top: 32px;
+    margin-bottom: 22px;
+    width: 260px;
+  }
+
+  .showcase-img {
+    padding-top: 28px;
+    height: 210px;
+    width: 260px;
+  }
+
+  .heart-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .product-name {
+    margin-bottom: 10px;
+  }
+
+  .price-type {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .view-product {
+    width: 75%;
+    height: 28px;
+  }
 }
 
 @media screen and (min-width: 550px) {
@@ -134,11 +184,13 @@
 
   .product-name {
     font-size: 18px;
+    margin: 0;
   }
 
   .price-type {
     font-size: 14px;
     margin-top: 12px;
+    margin-bottom: 0;
   }
 
   .view-product {
