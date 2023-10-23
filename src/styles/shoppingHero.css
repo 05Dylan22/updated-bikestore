@@ -28,7 +28,6 @@
 
 .showcase-product-div {
   position: relative;
-  width: fit-content;
   margin: auto;
 }
 
@@ -141,8 +140,48 @@
   }
 }
 
-@media screen and (min-width: 550px) {
-  
+@media screen and (min-width: 335px) {
+  .shopping-hero-title {
+    width: 95%;
+    font-size: 32px;
+    height: 125px;
+  }
+
+  .shopping-hero-explore {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 415px) {
+  .shopping-hero-title {
+    font-size: 38px;
+  }
+
+  .shopping-hero-explore {
+    font-size: 32px;
+  }
+
+  .showcase-product-div {
+    width: 375px
+  }
+
+  .showcase-img {
+    width: 375px;
+  }
+
+  .product-name {
+    margin-top: 8px;
+    font-size: 18px;
+  }
+
+  .price-type {
+    font-size: 14px;
+  }
+
+  .view-product {
+    height: 34px;
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 900px) {
