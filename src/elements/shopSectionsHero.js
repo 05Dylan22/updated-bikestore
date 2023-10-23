@@ -23,7 +23,8 @@ const ShopSectionHero = () => {
     getData(heroTerm)
   }, [heroTerm])
 
-  function changeHeart(e) {
+  function changeHeart(product) {
+    console.log(product)
     //if (!insideWishlist) {
     //  e.target.style.backgroundImage = `url(${imagesIcons.solidHeart})`
     //  addToWishlist(e)
@@ -63,7 +64,7 @@ const ShopSectionHero = () => {
               return (
                 <div className="showcase-product-div" key={product.id}>
                   <img className="showcase-img" src={product.images[0]} alt="bike name"/>
-                  <div onMouseLeave={(e) => left(e)} onMouseEnter={(e) => entered(e)} onClick={(e) => changeHeart(e)} className="heart-img"/>
+                  <div onMouseLeave={(e) => left(e)} onMouseEnter={(e) => entered(e)} onClick={() => changeHeart(product)} className="heart-img"/>
                   <div className="product-info">
                     <p className="product-name">{product.name}</p>
                     <p className="price-type">{product.make} &#124; {product.price}</p>
