@@ -46,7 +46,7 @@ function App() {
       </DataProvider>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/shoppingCategory" element={<ShoppingCategory/>}/>
+          <Route path="/shoppingCategory" element={<DataProvider><ShoppingCategory/></DataProvider>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
         <Footer/>

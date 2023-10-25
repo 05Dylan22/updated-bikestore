@@ -1,16 +1,19 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
 import {useLocation} from "react-router-dom"
 import "../styles/shoppingHero.css"
 import { imagesIcons } from "../App"
+import DataContext from "../context/DataContext"
+
 
 const ShopSectionHero = () => {
+  const {wishlist, setWishlist} = useContext(DataContext)
   const [myData, setMyData] = useState()
   const [isLoading, setIsLoading] = useState(true)
   const location = useLocation()
   const heroTerm = location.state.heroTerm
   const categoryName = location.state.categoryName
 
-  async function getData(term) {
+  async function getData() {
     const data = await fetch("http://localhost:5000/")
     const response = await data.json()
     setMyData(response)
@@ -20,31 +23,30 @@ const ShopSectionHero = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
     setIsLoading(true)
-    getData(heroTerm)
+    getData()
   }, [heroTerm])
 
-  function changeHeart(product) {
-    console.log(product)
-    //if (!insideWishlist) {
-    //  e.target.style.backgroundImage = `url(${imagesIcons.solidHeart})`
-    //  addToWishlist(e)
-    //} else {
-    //  e.target.style.backgroundImage = `url(${imagesIcons.heartOutline})`
-    // removeFromWishlist(e)
-    //}
+  function changeHeart(e, product) {
+    if (wishlist[product.name]) {
+      e.target.style.backgroundImage = `url(${imagesIcons.heartOutline})`
+      delete wishlist[product.name]
+      setWishlist({...wishlist})
+    } else {
+      wishlist[product.name] = product
+      setWishlist({...wishlist})
+      e.target.style.backgroundImage = `url(${imagesIcons.solidHeart})`
+    }
   }
 
-  function entered(e) {
-    //if (insideWishlist) return
+  function entered(e, product) {
+    if (wishlist[product.name]) return
     e.target.style.backgroundImage = `url(${imagesIcons.solidHeart})`
   }
 
-  function left(e) {
-    e.target.style.backgroundImage = `url(${imagesIcons.heartOutline})`
-
-    //if (!insideWishlist) {
-    //  e.target.style.backgroundImage = `url(${imagesIcons.heartOutline})`
-    //} else {keep background image as solid}
+  function left(e, product) {
+    if (!wishlist[product.name]) {
+      e.target.style.backgroundImage = `url(${imagesIcons.heartOutline})`
+    }
   }
 
   return (
@@ -64,7 +66,7 @@ const ShopSectionHero = () => {
               return (
                 <div className="showcase-product-div" key={product.id}>
                   <img className="showcase-img" src={product.images[0]} alt="bike name"/>
-                  <div onMouseLeave={(e) => left(e)} onMouseEnter={(e) => entered(e)} onClick={() => changeHeart(product)} className="heart-img"/>
+                  <div onMouseLeave={(e) => left(e, product)} onMouseEnter={(e) => entered(e, product)} onClick={(e) => changeHeart(e, product)} className="heart-img" style={wishlist[product.name] && {backgroundImage: `url(${imagesIcons.solidHeart})`}}/>
                   <div className="product-info">
                     <p className="product-name">{product.name}</p>
                     <p className="price-type">{product.make} &#124; {product.price}</p>

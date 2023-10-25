@@ -16,8 +16,9 @@ function reducer (state, action) {
 }
 
 export const DataProvider = ({children}) => {
-  const [state, dispatch] = useReducer(reducer, {open: false, currentOpen: null, displayIconEl: null})
+  const [state, dispatch] = useReducer(reducer, {open: false, currentOpen: null, displayIconEl: null, wishlist: {}})
   const [heartHover, setHeartHover] = useState(imagesIcons.heartOutline)
+  const [wishlist, setWishlist] = useState({})
 
   function fillHeart () {
     setHeartHover(imagesIcons.solidHeart)
@@ -27,7 +28,7 @@ export const DataProvider = ({children}) => {
     setHeartHover(imagesIcons.heartOutline)
   }
   return (
-    <DataContext.Provider value={{dispatch, state, fillHeart, emptyHeart, heartHover}}>
+    <DataContext.Provider value={{dispatch, state, fillHeart, emptyHeart, heartHover, wishlist, setWishlist}}>
       {children}
     </DataContext.Provider>
   )
