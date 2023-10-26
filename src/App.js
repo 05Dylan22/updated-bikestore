@@ -43,13 +43,13 @@ function App() {
     <div className="App">
       <DataProvider>
         {largeScreen ? <LargeHeader/> : <SmallHeader/>}
-      </DataProvider>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/shoppingCategory" element={<DataProvider><ShoppingCategory/></DataProvider>}/>
+          <Route path="/shoppingCategory" element={<ShoppingCategory/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
         <Footer/>
+      </DataProvider>
     </div>
   );
 }

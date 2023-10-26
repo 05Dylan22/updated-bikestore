@@ -10,7 +10,7 @@ import DataContext from "../context/DataContext"
 
 const LargeHeader = () => {
   const {dispatch, state, fillHeart, emptyHeart, heartHover} = useContext(DataContext)
-
+  
   return (
     <header className="large-header">
       <Link to="/">
@@ -18,7 +18,7 @@ const LargeHeader = () => {
       </Link>
       <MiddleHeader/>
       <img onClick={() => dispatch({payload: {identifier: "SEARCH", component: <SearchPage/>}})} alt="search icon" className="large-search-icon" src={imagesIcons.searchIcon}/>
-      <img onClick={() => dispatch({payload: {identifier: "WISHLIST", component: <Wishlist items={[]}/>}})} onMouseLeave={emptyHeart} onMouseOver={fillHeart} alt="heart icon outline" className="large-wishlist-icon" src={heartHover}/>
+      <img onClick={() => dispatch({payload: {identifier: "WISHLIST", component: <Wishlist items={state.wishlist}/>}})} onMouseLeave={emptyHeart} onMouseOver={fillHeart} alt="heart icon outline" className="large-wishlist-icon" src={heartHover}/>
       <img onClick={() => dispatch({payload: {identifier: "PROFILE", component: <Profile/>}})} alt="profile icon" className="large-profile-icon" src={imagesIcons.profileIcon}/>
       <img onClick={() => dispatch({payload: {identifier: "CART", component: <Cart items={[]}/>}})} alt="cart icon" className="large-cart-icon" src={imagesIcons.cartIcon}/>
       {state.displayIconEl}

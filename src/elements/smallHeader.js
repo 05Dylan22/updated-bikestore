@@ -12,7 +12,7 @@ const SmallHeader = () => {
   return (
     <header className="small-header">
       <HamburgerMenu dispatch={dispatch}/>
-      <img onClick={() => {dispatch({payload: {identifier: "WISHLIST", component: <Wishlist items={[]} />}})}} alt="heart icon outline" className="small-wishlist-icon" src={imagesIcons.heartOutline}/>
+      <img onClick={() => {dispatch({payload: {identifier: "WISHLIST", component: <Wishlist items={state.wishlist} />}})}} alt="heart icon outline" className="small-wishlist-icon" src={imagesIcons.heartOutline}/>
       <img alt="business logo" className="small-logo" src={imagesIcons.logo}/>
       <img onClick={() => {dispatch({payload: {identifier: "SEARCH", component: <SearchPage/>}})}} alt="search icon" className="small-search-icon" src={imagesIcons.searchIcon}/>
       <img onClick={() => {dispatch({payload: {identifier: "PROFILE", component: <Profile/>}})}} alt="profile icon" className="small-profile-icon" src={imagesIcons.profileIcon}/>
