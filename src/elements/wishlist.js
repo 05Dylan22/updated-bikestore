@@ -1,10 +1,14 @@
 import FilledWishlist from "./filledWishlist"
 import EmptyWishlist from "./emptyWishlist"
+import DataContext from "../context/DataContext"
+import { useContext } from "react"
 
-const Wishlist = ({ items }) => {
+const Wishlist = ({bikes}) => {
+  const {state} = useContext(DataContext)
+  console.log(state)
   return (
     <>
-      {Object.keys(items).length > 0 ? <FilledWishlist items={items} /> : <EmptyWishlist/>}
+      {Object.keys(bikes).length > 0 ? <FilledWishlist items={bikes} /> : <EmptyWishlist/>}
     </>
   )
 }

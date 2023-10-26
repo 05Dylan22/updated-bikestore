@@ -5,12 +5,13 @@ import "./styles/wishlist.css"
 import Home from './pages/home';
 import { Route, Routes } from 'react-router-dom';
 import {DataProvider} from './context/DataContext';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import LargeHeader from './elements/largeHeader';
 import SmallHeader from './elements/smallHeader';
 import NotFound from './pages/404';
 import Footer from './elements/footer';
 import ShoppingCategory from './pages/shoppingCategory';
+import Wishlist from './elements/wishlist';
 
 export const imagesIcons = {
   heartOutline: require("./images+icons/heart.png"),
@@ -40,8 +41,8 @@ function App() {
   window.addEventListener("resize", checkScreenSize)
 
   return (
+    <DataProvider>
     <div className="App">
-      <DataProvider>
         {largeScreen ? <LargeHeader/> : <SmallHeader/>}
         <Routes>
           <Route path="/" element={<Home/>}/>
@@ -49,8 +50,8 @@ function App() {
           <Route path="*" element={<NotFound/>}/>
         </Routes>
         <Footer/>
-      </DataProvider>
     </div>
+    </DataProvider>
   );
 }
 
