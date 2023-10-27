@@ -10,6 +10,7 @@
 .wishlist-item {
   border: 1px solid black;
   border-radius: 6px;
+  position: relative;
   cursor: pointer;
   margin: auto;
   display: flex;
@@ -55,6 +56,14 @@
   background-color: black;
   color: white;
   transition: all 0.15s;
+}
+
+.wishlist-item-heart {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  right: -15px;
+  top: -15px;
 }
 
 .wishlist-add-to-cart:hover {
