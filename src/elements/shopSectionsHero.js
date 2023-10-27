@@ -1,12 +1,14 @@
-import { useEffect, useState, useContext } from "react"
+import { useEffect, useState } from "react"
 import {useLocation} from "react-router-dom"
 import "../styles/shoppingHero.css"
 import { imagesIcons } from "../App"
-import DataContext from "../context/DataContext"
+import { useDispatch, useSelector } from "react-redux"
+import { addItem, removeItem } from "../redux/handleWishlist"
 
 
 const ShopSectionHero = () => {
-  const {dispatch, state} = useContext(DataContext)
+  const wishlist = useSelector((state) => state.handleWishlist.wishlistContents)
+  const dispatch = useDispatch()
   const [myData, setMyData] = useState()
   const [isLoading, setIsLoading] = useState(true)
   const location = useLocation()
@@ -27,22 +29,22 @@ const ShopSectionHero = () => {
   }, [heroTerm])
 
   function changeHeart(e, product) {
-    if (state.wishlist[product.name]) {
+    if (wishlist[product.name]) {
       e.target.style.backgroundImage = `url(${imagesIcons.heartOutline})`
-      dispatch({type: "REMOVEWISHLISTITEM", payload: product})
+      dispatch(removeItem(product))
     } else {
       e.target.style.backgroundImage = `url(${imagesIcons.solidHeart})`
-      dispatch({type: "ADDWISHLISTITEM", payload: product})
+      dispatch(addItem(product))
     }
   }
 
   function entered(e, product) {
-    if (state.wishlist[product.name]) return
+    if (wishlist[product.name]) return
     e.target.style.backgroundImage = `url(${imagesIcons.solidHeart})`
   }
 
   function left(e, product) {
-    if (!state.wishlist[product.name]) {
+    if (!wishlist[product.name]) {
       e.target.style.backgroundImage = `url(${imagesIcons.heartOutline})`
     }
   }
@@ -64,7 +66,7 @@ const ShopSectionHero = () => {
               return (
                 <div className="showcase-product-div" key={product.id}>
                   <img className="showcase-img" src={product.images[0]} alt="bike name"/>
-                  <div onMouseLeave={(e) => left(e, product)} onMouseEnter={(e) => entered(e, product)} onClick={(e) => changeHeart(e, product)} className="heart-img" style={state.wishlist[product.name] && {backgroundImage: `url(${imagesIcons.solidHeart})`}}/>
+                  <div onMouseLeave={(e) => left(e, product)} onMouseEnter={(e) => entered(e, product)} onClick={(e) => changeHeart(e, product)} className="heart-img" style={wishlist[product.name] && {backgroundImage: `url(${imagesIcons.solidHeart})`}}/>
                   <div className="product-info">
                     <p className="product-name">{product.name}</p>
                     <p className="price-type">{product.make} &#124; {product.price}</p>

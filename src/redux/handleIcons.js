@@ -41,6 +41,6 @@ export const iconSlice = createSlice({
   }
 })
 
-export const {handleIcons, increment} = iconSlice.actions
+export const {handleIcons} = iconSlice.actions
 
 export default iconSlice.reducer

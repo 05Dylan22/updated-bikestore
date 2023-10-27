@@ -4,7 +4,6 @@ import ShopPopular from "../elements/shopPopular"
 import BlogPost from "../elements/blogPost"
 
 const Home = () => {
-
   return (
     <section className="home-page">
       <section className="hero-home">

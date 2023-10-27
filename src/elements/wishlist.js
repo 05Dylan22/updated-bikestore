@@ -1,14 +1,13 @@
 import FilledWishlist from "./filledWishlist"
 import EmptyWishlist from "./emptyWishlist"
-import DataContext from "../context/DataContext"
-import { useContext } from "react"
+import { useSelector } from "react-redux"
 
-const Wishlist = ({bikes}) => {
-  const {state} = useContext(DataContext)
-  console.log(state)
+const Wishlist = () => {
+  const wishlistContents = useSelector((state) => state.handleWishlist.wishlistContents)
+  console.log(wishlistContents)
   return (
     <>
-      {Object.keys(bikes).length > 0 ? <FilledWishlist items={bikes} /> : <EmptyWishlist/>}
+      {Object.keys(wishlistContents).length > 0 ? <FilledWishlist items={wishlistContents} /> : <EmptyWishlist/>}
     </>
   )
 }
