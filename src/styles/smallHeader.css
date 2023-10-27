@@ -2,6 +2,9 @@
   width: 100vw;
   background-color: white;
   height: 85px;
+  top: 0;
+  left: 0;
+  right: 0;
   position: sticky;
   border-bottom: 1px solid gray;
   z-index: 100;
