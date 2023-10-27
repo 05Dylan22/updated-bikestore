@@ -1,10 +1,15 @@
+import { useSelector } from "react-redux"
 import WishlistItem from "./wishlistItem"
 
-const FilledWishlist = ({ items }) => {
+const FilledWishlist = () => {
+  const wishlistContents = useSelector((state) => state.handleWishlist.wishlistContents)
+  const bikes = Object.keys(wishlistContents)
+  const totalItems = bikes.length
   return (
     <div className="icon-container">
       <p className="wishlist-title">My Wishlist</p>
-      <p className="wishlist-subtitle">You Have {items.length} Item(s) In Your Wishlist</p>
+      <p className="wishlist-subtitle">You Have {totalItems} Item(s) In Your Wishlist</p>
+      {bikes.map(bike => <WishlistItem key={bike.id} name={bike.name} price={bike.price}/>)}
     </div>
   )
 }
