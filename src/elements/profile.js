@@ -1,12 +1,12 @@
 import "../styles/profilePopup.css"
-import { useContext } from "react"
-import DataContext from "../context/DataContext"
+import { useDispatch } from "react-redux"
+import { handleIcons } from "../redux/handleIcons"
 
 const Profile = () => {
-  const {dispatch} = useContext(DataContext)
+  const dispatch = useDispatch()
   return (
     <section className="profile-wrapper">
-      <p onClick={() => dispatch({payload: {identifier: "PROFILE"}})} className="profile-close-x">X</p>
+      <p onClick={() => dispatch(handleIcons({identifier: "PROFILE"}))} className="profile-close-x">X</p>
       <div className="profile-container">
         <div className="profile-top-sect">
           <img loading="lazy" className="profile-collage-img1" src={require("../images+icons/profile-collageimg.jpg")} alt="Mountain Biker riding downhill" />
