@@ -1,11 +1,14 @@
 import "../styles/hamburgerMenus.css"
 import { imagesIcons } from "../App"
 import {Link} from "react-router-dom"
+import { useDispatch } from "react-redux"
+import { handleIcons } from "../redux/handleIcons"
 
-const HamburgerMenus = ({dispatch}) => {
+const HamburgerMenus = () => {
+  const dispatch = useDispatch()
 
   function closeHamburger() {
-    dispatch({payload: {identifier: "HAMBURGERMENU", component: <HamburgerMenus/>}})
+    dispatch(handleIcons({identifier: "HAMBURGER"}))
   }
 
   return (

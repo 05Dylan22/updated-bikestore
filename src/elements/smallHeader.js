@@ -9,7 +9,7 @@ const SmallHeader = () => {
 
   return (
     <header className="small-header">
-      <HamburgerMenu dispatch={dispatch}/>
+      <HamburgerMenu/>
       <img onClick={() => {dispatch(handleIcons({identifier: "WISHLIST"}))}} alt="heart icon outline" className="small-wishlist-icon" src={imagesIcons.heartOutline}/>
       <img alt="business logo" className="small-logo" src={imagesIcons.logo}/>
       <img onClick={() => {dispatch(handleIcons({identifier: "SEARCH"}))}} alt="search icon" className="small-search-icon" src={imagesIcons.searchIcon}/>

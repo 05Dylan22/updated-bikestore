@@ -3,6 +3,7 @@ import Profile from "../elements/profile";
 import SearchPage from "../elements/searchPage";
 import Wishlist from "../elements/wishlist";
 import Cart from "../elements/cart";
+import HamburgerMenus from "../elements/hamburgerMenus";
 
 function giveComponent(componentName) {
   switch (componentName) {
@@ -14,6 +15,8 @@ function giveComponent(componentName) {
       return <Wishlist/>
     case "CART":
       return <Cart/>
+    case "HAMBURGER":
+      return <HamburgerMenus/>
     default:
       throw new Error("Action not Found")
   }

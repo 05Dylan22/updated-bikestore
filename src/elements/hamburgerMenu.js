@@ -1,8 +1,10 @@
-import HamburgerMenus from "./hamburgerMenus"
+import { useDispatch } from "react-redux"
+import { handleIcons } from "../redux/handleIcons"
 
-const HamburgerMenu = ({dispatch}) => {
+const HamburgerMenu = () => {
+  const dispatch = useDispatch()
   return (
-    <div onClick={() => dispatch({payload: {identifier: "HAMBURGERMENU", component: <HamburgerMenus dispatch={dispatch}/>}})} className="hamburger-menu">
+    <div onClick={() => dispatch(handleIcons({identifier: "HAMBURGER"}))} className="hamburger-menu">
       <div className="hamburger-bar"></div>
       <div className="hamburger-bar"></div>
       <div className="hamburger-bar"></div>
