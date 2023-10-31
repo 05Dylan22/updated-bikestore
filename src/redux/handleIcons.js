@@ -31,6 +31,9 @@ export const iconSlice = createSlice({
   },
   reducers: {
     handleIcons: (state, action) => {
+      if (action.payload.type === "close") {
+        return {open: false, currentOpen: null, displayIconEl: null}
+      }
       if (!state.open) {
         return {open: true, currentOpen: action.payload.identifier, displayIconEl: giveComponent(action.payload.identifier)}
       }

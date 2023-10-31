@@ -14,6 +14,7 @@ export const heartSlice = createSlice({
   },
   reducers: {
     clickedHeart: (state) => {
+      console.log("made it")
       if (state.wishlistOpen) {
         state.wishlistOpen = !state.wishlistOpen
         state.heart = hearts.heartOutline

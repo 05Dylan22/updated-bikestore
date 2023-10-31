@@ -71,7 +71,7 @@ const MiddleHeader = () => {
   <nav onMouseLeave={(e) => {mouseLeft(e)}} className="large-middle-header">
     {Mountain.map((link) => {
       return (
-        <div onMouseEnter={(e) => {mouseEntered(e)}} key={link.key} className="large-links-div">
+        <div onMouseOver={(e) => {mouseEntered(e)}} key={link.key} className="large-links-div">
         <Link state={{heroTerm: link.heroTerm, categoryName: link.categoryName}} to={"/shoppingCategory"} className="large-header-links">{link.text}</Link>
         </div>
       )
