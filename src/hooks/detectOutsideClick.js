@@ -9,7 +9,7 @@ const useDetectOutsideClick = (popup) => {
     function handleClickOutside(event) {
       if (event.target.classList[0] === "large-wishlist-icon" || event.target.classList[0] === "small-wishlist-icon") return
       if (popup.current && !popup.current.contains(event.target)) {
-        dispatch(clickedHeart())
+        if (popup.current.id === "wishlist") dispatch(clickedHeart())
         dispatch(handleIcons({type: "close"}))
       }
     }

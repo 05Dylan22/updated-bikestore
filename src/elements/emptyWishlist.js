@@ -6,7 +6,7 @@ const EmptyWishlist = () => {
   useDetectOutsideClick(popup)
   
   return (
-    <div ref={popup} className="icon-container">
+    <div ref={popup} id="wishlist" className="icon-container">
       <p className="wishlist-title">My Wishlist</p>
       <p className="wishlist-subtitle">You Have 0 Items In Your Wishlist</p>
     </div>
