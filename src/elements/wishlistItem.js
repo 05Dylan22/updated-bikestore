@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux"
 import { removeItem } from "../redux/handleWishlist"
 import { imagesIcons } from "../App"
 import { useRef } from "react"
+import { addToCart } from "../redux/handleCart"
 
 const WishlistItem = ({ name, price, desc, img, bike }) => {
   const dispatch = useDispatch()
@@ -13,6 +14,11 @@ const WishlistItem = ({ name, price, desc, img, bike }) => {
       dispatch(removeItem(bike))
     },550)
   }
+
+  function removeAndAddToCart(e) {
+    dispatch(addToCart(bike))
+    removeWishlistItem(e)
+  }
   return (
     <div ref={WishlistItem} className="wishlist-item">
       <img onClick={(e) => removeWishlistItem(e)} className="wishlist-item-heart" src={imagesIcons.solidHeart} alt="solid heart" />
@@ -22,7 +28,7 @@ const WishlistItem = ({ name, price, desc, img, bike }) => {
         <p className="wishlist-item-desc">{desc}</p>
         <div className="bottom-wishlist-item">
           <p className="wishlist-item-price">{price}</p>
-          <button onClick={(e) => removeWishlistItem(e)} className="wishlist-add-to-cart">Add To Cart</button>
+          <button onClick={(e) => removeAndAddToCart(e)} className="wishlist-add-to-cart">Add To Cart</button>
         </div>
       </div>
     </div>
