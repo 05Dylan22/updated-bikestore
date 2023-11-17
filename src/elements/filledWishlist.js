@@ -11,7 +11,7 @@ const FilledWishlist = () => {
   useDetectOutsideClick(popup)
 
   return (
-    <div ref={popup} className="icon-container">
+    <div ref={popup} id="wishlist" className="icon-container">
       <p className="wishlist-title">My Wishlist</p>
       <p className="wishlist-subtitle">You Have {totalItems} Item(s) In Your Wishlist</p>
       {bikes.map(bike => <WishlistItem key={wishlistContents[bike].id} name={wishlistContents[bike].name} price={wishlistContents[bike].price} desc={wishlistContents[bike].description} img={wishlistContents[bike].images[0]} bike={wishlistContents[bike]}/>)}

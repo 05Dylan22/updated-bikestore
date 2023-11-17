@@ -12,20 +12,21 @@ const Footer = () => {
       </div>
       <p className="signup-consent">By submitting this form, you consent to sending the above information to Everything Bikes, which will be stored in the United States. For a detailed explanation of Everything Bike's collection and use of personal data please see the Privacy Policy & Terms of Use.</p>
       <div className="social-links">
-        <img className="social-logo" src={require("../images+icons/FacebookLogo.png")} alt="Facebook Logo" />
-        <img className="social-logo" src={require("../images+icons/YouTubeLogo.png")} alt="YouTube Logo" />
-        <img className="social-logo" src={require("../images+icons/InstagramLogo.png")} alt="Instagram Logo" />
-        <img className="social-logo" src={require("../images+icons/TwitterLogo.png")} alt="Twitter Logo" />
+        <a href="https://www.facebook.com/"><img className="social-logo" src={require("../images+icons/FacebookLogo.png")} alt="Facebook Logo" /></a>
+        <a href="https://www.youtube.com/"><img className="social-logo" src={require("../images+icons/YouTubeLogo.png")} alt="YouTube Logo" /></a>
+        <a href="https://www.instagram.com/"><img className="social-logo" src={require("../images+icons/InstagramLogo.png")} alt="Instagram Logo" /></a>
+        <a href="https://twitter.com/"><img className="social-logo" src={require("../images+icons/TwitterLogo.png")} alt="Twitter Logo" /></a>
       </div>
       <div className="sitemap">
         <div className="shop-footer">
           <p className="sitemap-section-title">Shop</p>
-          <Link state={{category: "Mountain"}} to={"/shoppingCategory"} className="sitemap-item">Mountain Bikes</Link>
-          <Link state={{category: "Road"}} to={"/shoppingCategory"} className="sitemap-item">Road Bikes</Link>
-          <Link state={{category: "Electric"}} to={"/shoppingCategory"} className="sitemap-item">Electric Bikes</Link>
-          <Link state={{category: "Parts"}} to={"/shoppingCategory"} className="sitemap-item">Parts</Link>
-          <Link state={{category: "Accessories"}} to={"/shoppingCategory"} className="sitemap-item">Accessories</Link>
-          <Link state={{category: "Apparel"}} to={"/shoppingCategory"} className="sitemap-item">Apparel</Link>
+          <Link state={{heroTerm: "fullSuspensionHero", categoryName: "fullsuspensionbikes"}} to={"/shoppingCategory"} className="sitemap-item">Full Suspension</Link>
+          <Link state={{heroTerm: "hardtailHero", categoryName: "hardtailbikes"}} to={"/shoppingCategory"} className="sitemap-item">Hardtail</Link>
+          <Link state={{heroTerm: "crosscountryHero", categoryName: "crosscountrybikes"}} to={"/shoppingCategory"} className="sitemap-item">Cross Country</Link>
+          <Link state={{heroTerm: "trailHero", categoryName: "trailbikes"}} to={"/shoppingCategory"} className="sitemap-item">Trail</Link>
+          <Link state={{heroTerm: "enduroHero", categoryName: "endurobikes"}} to={"/shoppingCategory"} className="sitemap-item">Enduro</Link>
+          <Link state={{heroTerm: "downhillHero", categoryName: "downhillbikes"}} to={"/shoppingCategory"} className="sitemap-item">Downhill</Link>
+          <Link state={{heroTerm: "fatHero", categoryName: "fatbikes"}} to={"/shoppingCategory"} className="sitemap-item">Fat Bikes</Link>
         </div>
         <div className="support-footer">
           <p className="sitemap-section-title">Support</p>
