@@ -12,6 +12,7 @@
   cursor: pointer;
   background-color: rgb(245, 245, 245);
   margin: auto;
+  margin-bottom: 22px;
 }
 
 .cart-item-info {
