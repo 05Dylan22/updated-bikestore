@@ -32,6 +32,8 @@ export const cartSlice = createSlice({
     },
 
     removeFromCart: (state, action) => {
+      delete state.quantities[action.payload]
+      if (action.payload.name === undefined) delete state.cartContents[action.payload]
       delete state.cartContents[action.payload.name]
     }
   },
