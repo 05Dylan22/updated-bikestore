@@ -1,7 +1,9 @@
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
+import { increaseQuantity, decrementQuantity } from "../redux/handleCart"
 
 const FilledCart = () => {
-  const cartContents = useSelector((state) => state.handleCart.cartContents)
+  const { cartContents, quantities } = useSelector((state) => state.handleCart)
+  const dispatch = useDispatch()
   const cartItems = Object.keys(cartContents)
   let totalPrice = 0
 
@@ -20,16 +22,16 @@ const FilledCart = () => {
     <>
     {cartItems.map((bike) => (
         <div key={cartContents[bike].name} className="cart-item">
-          <img className="cart-item-img" src={cartContents[bike].img} alt="cart item" />
+          <img className="cart-item-img" src={cartContents[bike].images[0]} alt="cart item" />
           <div className="cart-item-info">
             <p className="cart-item-title">{cartContents[bike].name}</p>
-            <p className="cart-item-desc">{cartContents[bike].desc}</p>
+            <p className="cart-item-desc">{cartContents[bike].description}</p>
             <p className="cart-item-price">${cartContents[bike].price}</p>
           </div>
           <div className="quantity-div">
-            <p className="quantity-changer">+</p>
-            <p className="item-quantity">{cartContents[bike].quantity}</p>
-            <p className="quantity-changer">-</p>
+            <p onClick={() => dispatch(increaseQuantity(bike))} className="quantity-changer">+</p>
+            <p className="item-quantity">{quantities[bike]}</p>
+            <p onClick={() => dispatch(decrementQuantity(bike))} className="quantity-changer">-</p>
           </div>
         </div>
       ))}
