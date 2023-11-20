@@ -8,7 +8,7 @@ const FilledCart = () => {
   let totalPrice = 0
 
   cartItems.map((bike) => {
-    return totalPrice += Number(cartContents[bike].price.replace(",", ""))
+    return totalPrice += Number(cartContents[bike].price.replace(",", "")) * quantities[bike]
   })
 
   function findTaxes(total) {
