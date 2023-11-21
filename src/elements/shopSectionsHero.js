@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import {useLocation} from "react-router-dom"
+import {useLocation, Link} from "react-router-dom"
 import "../styles/shoppingHero.css"
 import { imagesIcons } from "../App"
 import { useDispatch, useSelector } from "react-redux"
@@ -70,7 +70,7 @@ const ShopSectionHero = () => {
                   <div className="product-info">
                     <p className="product-name">{product.name}</p>
                     <p className="price-type">{product.make} &#124; {product.price}</p>
-                    <button className="view-product">View Bike</button>
+                    <Link to={"/productPage"} className="shop-item-link"><button className="view-product">View Bike</button></Link>
                   </div>
                 </div>
               )

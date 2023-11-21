@@ -12,6 +12,7 @@ import NotFound from './pages/404';
 import Footer from './elements/footer';
 import ShoppingCategory from './pages/shoppingCategory';
 import Wishlist from './elements/wishlist';
+import ProductPage from './pages/productPage';
 
 export const imagesIcons = {
   heartOutline: require("./images+icons/heart.png"),
@@ -47,6 +48,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/shoppingCategory" element={<ShoppingCategory/>}/>
+          <Route path="/productPage" element={<ProductPage/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
         <Footer/>

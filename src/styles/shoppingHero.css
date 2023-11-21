@@ -17,6 +17,13 @@
   margin: auto;
 }
 
+.shop-item-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
 .shopping-hero-desc {
   text-align: center;
   margin: auto;
