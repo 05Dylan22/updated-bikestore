@@ -1,0 +1,260 @@
+.slider-container {
+  display: inline-flex;
+  overflow: hidden;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+  cursor: grab;
+  align-items: center;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  user-select: none;
+  -ms-user-select: none;
+}
+
+.slide > img{
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-nav-buttons {
+  width: 550px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow1, .arrow2 {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.arrow1:hover, .arrow2:hover {
+  color: white;
+  background-color: black;
+}
+
+.arrow1 {
+  position: absolute;
+}
+
+.arrow2 {
+  position: absolute;
+}
+
+.slider-dot, .active-dot {
+  margin: 0;
+  height: 8px;
+  width: 8px;
+  border: none;
+  border-radius: 100px;
+  margin-bottom: 18px;
+  background-color: darkgray;
+  margin-left: 15px;
+}
+
+.active-dot {
+  height: 9.25px;
+  width: 9.25px;
+  background-color: black;
+}
+
+.slider-dot:first-child {
+  margin-left: 0;
+}
+
+.product-heart-container {
+  width: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.product-heart {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 270px) {
+  .slide {
+    height: 200px;
+  }
+
+  .slide > img {
+    max-height: 200px;
+    max-width: 200px;
+  }
+
+  .arrow1 {
+    left: 0;
+    top: -175px;
+  }
+
+  .arrow2 {
+    right: 0;
+    top: -175px;
+  }
+}
+
+@media screen and (min-width: 270px) {
+  
+}
+
+
+@media screen and (min-width: 270px) {
+  
+}
+
+@media screen and (min-width: 1000px) {
+  .slide {
+    height: 400px;
+  }
+
+  .slide > img {
+    max-height: 400px;
+    max-width: 500px;
+  }
+
+  .arrow1 {
+    left: -50px;
+    top: -225px;
+  }
+
+  .arrow2 {
+    right: -50px;
+    top: -225px;
+  }
+
+  .product-display-info {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .product-page-name {
+    font-size: 38px;
+    font-weight: 600;
+    margin-left: 64px;
+    margin-bottom: 0;
+  }
+
+  .product-top-rating {
+    display: flex;
+    height: 38px;
+    margin-top: 10px;
+    align-items: center;
+  }
+
+  .star-rating-div {
+    display: flex;
+    margin-left: 62px;
+    width: max-content;
+  }
+
+  .product-review-star {
+    margin-top: auto;
+    font-size: 24px;
+    margin-bottom: auto;
+  }
+
+  .product-page-reviews {
+    font-size: 14px;
+    margin-left: 8px;
+    margin-bottom: 10px;
+  }
+
+  .product-page-price {
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 64px;
+    margin-top: 10px;
+  }
+
+  .product-page-description {
+    width: 400px;
+    margin-top: 38px;
+  }
+
+  .product-pick-color {
+    width: 200px;
+    height: 125px;
+    margin-left: 112px;
+    margin-top: 42px;
+  }
+
+  .pick-color-title, .product-size-title {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  .product-colors {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .empty-product-color-div {
+    height: 60px;
+    width: 60px;
+    border-radius: 120px;
+    cursor: pointer;
+    transition: all 0s;
+  }
+
+  .empty-product-color-div:hover {
+    outline: 2px solid black;
+    outline-offset: 1px;
+  }
+
+  .color-div-selected {
+    outline: 2px solid black;
+    outline-offset: 1px;
+  }
+
+  #black {
+    background-color: black;
+  }
+
+  #silver {
+    background-color: silver;
+  }
+
+  #red {
+    background-color: red;
+  }
+
+  .product-size-title {
+    margin-left: 112px;
+    margin-top: 54px;
+  }
+
+  .product-pick-size {
+    margin-left: 112px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .product-size {
+    height: 35px;
+    width: 205px;
+    border-radius: 2px;
+    border: 1px solid black;
+  
+  }
+}

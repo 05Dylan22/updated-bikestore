@@ -70,7 +70,7 @@ const ShopSectionHero = () => {
                   <div className="product-info">
                     <p className="product-name">{product.name}</p>
                     <p className="price-type">{product.make} &#124; {product.price}</p>
-                    <Link to={"/productPage"} className="shop-item-link"><button className="view-product">View Bike</button></Link>
+                    <Link to={"/productPage"} state={product} className="shop-item-link"><button className="view-product">View Bike</button></Link>
                   </div>
                 </div>
               )
