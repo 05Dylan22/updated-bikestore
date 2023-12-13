@@ -12,10 +12,10 @@ const ProductTopDisplay = () => {
   const wishlistContents = useSelector((state) => state.handleWishlist.wishlistContents)
   const [startPos, setStartPos] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
-  const [currentTranslate, setCurrentTranslate] = useState(0)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [stateOfHeart, setStateOfHeart] = useState()
   const prevTranslate = currentIndex * -window.innerWidth
+  let currentTranslate = prevTranslate
 
 
   useEffect(() => {
@@ -31,10 +31,6 @@ const ProductTopDisplay = () => {
     if (dots.length > 0) dots[currentIndex].classList.toggle("active-dot")
     slider.current.style.transform = `translateX(${currentIndex * -window.innerWidth}px)`
   }, [currentIndex])
-
-  useEffect(() => {
-    slider.current.style.transform = `translateX(${currentTranslate}px)`
-  }, [currentTranslate])
 
   function forwardOneProduct() {
     const dots = Array.from(document.getElementsByClassName("slider-dot"))
@@ -52,16 +48,16 @@ const ProductTopDisplay = () => {
     }
   }
 
-  function grabStart(event, index) {
+  function grabStart(event) {
     setIsDragging(true)
-    setCurrentIndex(index)
     setStartPos(event.pageX)
   }
 
   function sliding(event) {
     if (!isDragging) return
     const currentPosition = event.pageX
-    setCurrentTranslate(prevTranslate + currentPosition - startPos)
+    currentTranslate = prevTranslate + currentPosition - startPos
+    slider.current.style.transform = `translateX(${currentTranslate}px)`
   }
 
   function grabEnd() {
@@ -73,18 +69,18 @@ const ProductTopDisplay = () => {
     }
 
     if (movedBy > 100 && currentIndex > 0) {
-      console.log(currentIndex)
       backOneProduct()
       return
     }
-
-    setCurrentTranslate(prevTranslate)
-    setIsDragging(false)
+    handleMouseLeft()
   }
 
   function handleMouseLeft() {
-    setCurrentTranslate(prevTranslate)
-    setIsDragging(false)
+    if (currentTranslate !== prevTranslate && isDragging) {
+      currentTranslate = prevTranslate
+      slider.current.style.transform = `translateX(${currentTranslate}px)`
+      setIsDragging(false)
+    }
   }
 
   function hoverProductHeart() {
@@ -108,11 +104,11 @@ const ProductTopDisplay = () => {
         <img onMouseLeave={leftProductHeart} onMouseDown={clickedProductHeart} onMouseOver={hoverProductHeart} className="product-heart" src={stateOfHeart} alt="wishlist heart" />
       </div>
       <div ref={slider} className="slider-container">
-        {bike.images.map((image, index) => (
-          <div key={index} onMouseLeave={() => handleMouseLeft()} onMouseUp={grabEnd} onDragEnd={grabEnd} onMouseMove={(event) => sliding(event)} onMouseDown={(event) => grabStart(event, index)} className="slide">
-            <img draggable={false} src={image} alt={bike.name} className="slide-img" />
-          </div>
-        ))}
+            {bike.images.map((image, index) => (
+              <div key={index} onMouseLeave={() => handleMouseLeft()} onMouseUp={grabEnd} onMouseMove={(event) => sliding(event)} onMouseDown={(event) => grabStart(event, index)} className="slide">
+                <img draggable={false} src={image} alt={bike.name} className="slide-img" />
+              </div>
+            ))}
       </div>
       <div className="slider-nav-buttons">
         <button onClick={backOneProduct} className="arrow1">&#60;</button>

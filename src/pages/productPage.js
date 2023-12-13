@@ -12,7 +12,7 @@ const ProductPage = () => {
     <>
       <ProductTopDisplay/>
       <div className="product-display-info">
-        <div>
+        <div className="product-info-left">
           <p className="product-page-name">{bike.name}</p>
           <div className="product-top-rating">
             <div className="star-rating-div">

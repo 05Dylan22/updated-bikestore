@@ -11,9 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 100vw;
-  user-select: none;
-  -ms-user-select: none;
+  width: 100vw;
 }
 
 .slide > img{
@@ -147,10 +145,13 @@
     justify-content: space-around;
   }
 
+  .product-info-left {
+    width: 600px;
+  }
+
   .product-page-name {
     font-size: 38px;
     font-weight: 600;
-    margin-left: 64px;
     margin-bottom: 0;
   }
 
@@ -163,7 +164,6 @@
 
   .star-rating-div {
     display: flex;
-    margin-left: 62px;
     width: max-content;
   }
 
@@ -182,12 +182,12 @@
   .product-page-price {
     font-size: 22px;
     font-weight: 500;
-    margin-left: 64px;
     margin-top: 10px;
   }
 
   .product-page-description {
     width: 400px;
+    font-size: 18px;
     margin-top: 38px;
   }
 
