@@ -1,0 +1,84 @@
+.review {
+  border: none;
+  height: 275px;
+  width: 85%;
+  margin: auto;
+  border-radius: 2px;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+  margin-top: 34px;
+  background-color: rgb(232, 232, 232);
+  padding: 12px;
+  display: grid;
+}
+
+.top-reviewer-div {
+  display: flex;
+  height: 50px;
+  align-items: center;
+}
+
+.reviewer-initial {
+  margin: 0;
+  font-size: 26px;
+  border: none;
+  border-radius: 100px;
+  height: 45px;
+  width: 45px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.reviewer-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  margin-left: 24px;
+}
+
+.reviewer-info {
+  font-size: 13px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.reviewer-text {
+  font-size: 20px;
+}
+
+.upvote-btn, .downvote-btn {
+  height: 45px;
+  width: 65px;
+  border: 1px solid black;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 30px;
+  margin-right: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.upvote-btn {
+  background-color: green;
+}
+
+.downvote-btn {
+  background-color: red;
+}
+
+.upvote-count, .downvote-count {
+  display: inline-block;
+  margin-right: 12px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.upvote-count {
+  color: green;
+}
+
+.downvote-count {
+  color: red;
+}
