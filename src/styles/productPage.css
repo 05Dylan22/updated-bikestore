@@ -166,6 +166,8 @@
     display: flex;
     width: max-content;
     position: relative;
+    border: 1.5px solid gold;
+    border-radius: 4px;
   }
 
   .cover-stars-div {
@@ -173,7 +175,8 @@
     position: absolute;
     right: 0;
     background-color: white;
-    width: 82px;
+    border-radius: 4px;
+    width: 0px;
   }
 
   .product-review-star {
@@ -282,6 +285,12 @@
     color: white;
   }
 
+  .cart-btn-container {
+    position: relative;
+    margin-left: 112px;
+    width: 325px;
+  }
+
   .add-to-cart {
     height: 46px;
     width: 325px;
@@ -295,7 +304,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-left: 112px;
     margin-top: 42px;
     border: 2px solid black;
     font-weight: bold;
@@ -308,6 +316,15 @@
     background-color: transparent;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+
+  .item-added-p {
+    position: absolute;
+    width: 150px;
+    text-align: center;
+    top: -25px;
+    left: calc(50% - 75px);
+    opacity: 0;
   }
 
   @keyframes addCartClicked {
@@ -324,7 +341,7 @@
     }
 
     100% {
-      background-color: green;
+      background-color: black;
       position: absolute;
       border: none;
       z-index: -1;
@@ -333,6 +350,18 @@
       width: 330px;
       height: 330px;
       opacity: 1;
+    }
+  }
+
+  @keyframes showItemAdded {
+    0% {
+      opacity: 0;
+      top: -25;
+    }
+
+    100% {
+      opacity: 1;
+      top: -50px;
     }
   }
 

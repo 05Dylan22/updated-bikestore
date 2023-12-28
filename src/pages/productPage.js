@@ -18,12 +18,75 @@ const ProductPage = () => {
   const m = useRef(null)
   const l = useRef(null)
   const xl = useRef(null)
+  const coverStars = useRef(null)
+
+  //WIDTHS FOR TOP STARS
+  //0 === 164.8125
+  //0.25 === 152.571875
+  //0.5 === 148.33125
+  //0.75 === 144.090625
+  ///1 === 131.85
+  //1.25 === 119.609375
+  //1.5 === 115.36875
+  //1.75 === 111.128125
+  //2 === 98.8875
+  //2.25 === 86.646875
+  //2.5 === 82.40625
+  //2.75 === 78.165625
+  //3 === 65.925
+  //3.25 === 53.684375
+  //3.5 === 49.44375
+  //3.75 === 45.203125
+  //4 === 32.9625
+  //4.25 === 20.721875
+  //4.5 === 16.48125
+  //4.75 === 12.240625
+  //5 === 0
+
+  useEffect(() => {
+    const widthsForShowingStars = {
+      "0": 164.8125,
+      "0.25": 152.571875,
+      "0.5": 148.33125,
+      "0.75": 144.090625,
+      "1": 131.85,
+      "1.25": 119.609375,
+      "1.5": 115.36875,
+      "1.75": 111.128125,
+      "2": 98.8875,
+      "2.25": 86.646875,
+      "2.5": 82.40625,
+      "2.75": 78.165625,
+      "3": 65.925,
+      "3.25": 53.684375,
+      "3.5": 49.44375,
+      "3.75": 45.203125,
+      "4": 32.9625,
+      "4.25": 20.721875,
+      "4.5": 16.48125,
+      "4.75": 12.240625,
+      "5": 0
+    }
+
+    const totalRating = bike.reviews.reduce((totalStars, review) => {
+      return totalStars += review.rating
+    }, 0)
+
+    let avgRating = totalRating / bike.reviews.length
+    avgRating = (Math.round(avgRating * 4) / 4).toFixed(2)
+    coverStars.current.style.width = `${widthsForShowingStars[avgRating]}px`
+  }, [bike])
+
 
   function cartAnimation(e) {
+    e.target.disabled = true
     const child = e.target.children[0]
-    child.style.animation = "addCartClicked 0.65s ease-in-out"
+    child.style.animation = "addCartClicked 0.70s ease-in-out"
+    e.target.previousElementSibling.style.animation = "showItemAdded 0.75s ease-in-out"
     setTimeout(() => {
       child.style.animation = ""
+      e.target.previousElementSibling.style.animation = ""
+      e.target.disabled = false
     }, 750)
   }
 
@@ -92,7 +155,7 @@ const ProductPage = () => {
           <p className="product-page-name">{bike.name}</p>
           <div className="product-top-rating">
             <div className="star-rating-div">
-              <div className="cover-stars-div">
+              <div ref={coverStars} className="cover-stars-div">
               </div>
               <p className="product-review-star">&#11088;</p>
               <p className="product-review-star">&#11088;</p>
@@ -122,7 +185,10 @@ const ProductPage = () => {
         <div id="l" ref={l} onClick={(e) => selectSize(e)} className="product-size">L</div>
         <div id="xl" ref={xl} onClick={(e) => selectSize(e)} className="product-size">XL</div>
       </div>
-      <button onClick={(e) => cartAnimation(e)} className="add-to-cart"><div></div>Add To Cart</button>
+      <div className="cart-btn-container">
+        <p className="item-added-p">Item Added To Cart</p>
+        <button onClick={(e) => cartAnimation(e)} className="add-to-cart"><div></div>Add To Cart</button>
+      </div>
       <ReviewSection/>
     </>
   )

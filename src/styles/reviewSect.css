@@ -73,6 +73,8 @@
   margin-right: 12px;
   font-weight: 600;
   margin-bottom: 0;
+  width: 35px;
+  text-align: left;
 }
 
 .upvote-count {
