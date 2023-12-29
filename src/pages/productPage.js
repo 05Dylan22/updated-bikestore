@@ -2,7 +2,7 @@ import ReviewSection from "../elements/ReviewSection"
 import ProductTopDisplay from "../elements/productTopDisplay"
 import "../styles/productPage.css"
 import { useLocation } from "react-router-dom"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, startTransition } from "react"
 
 
 const ProductPage = () => {
@@ -20,41 +20,42 @@ const ProductPage = () => {
   const xl = useRef(null)
   const coverStars = useRef(null)
 
+  const widthsForShowingStars = {
+    "0": 164.8125,
+    "0.25": 152.571875,
+    "0.5": 148.33125,
+    "0.75": 144.090625,
+    "1": 131.85,
+    "1.25": 119.609375,
+    "1.5": 115.36875,
+    "1.75": 111.128125,
+    "2": 98.8875,
+    "2.25": 86.646875,
+    "2.5": 82.40625,
+    "2.75": 78.165625,
+    "3": 65.925,
+    "3.25": 53.684375,
+    "3.5": 49.44375,
+    "3.75": 45.203125,
+    "4": 32.9625,
+    "4.25": 20.721875,
+    "4.5": 16.48125,
+    "4.75": 12.240625,
+    "5": 0
+  }
+
+  const totalRating = bike.reviews.reduce((totalStars, review) => {
+    return totalStars += review.rating
+  }, 0)
+
+  let avgRating = totalRating / bike.reviews.length
+  const showRating = avgRating
+  avgRating = (Math.round(avgRating * 4) / 4).toFixed(2)
+
   useEffect(() => {
-    const widthsForShowingStars = {
-      "0": 164.8125,
-      "0.25": 152.571875,
-      "0.5": 148.33125,
-      "0.75": 144.090625,
-      "1": 131.85,
-      "1.25": 119.609375,
-      "1.5": 115.36875,
-      "1.75": 111.128125,
-      "2": 98.8875,
-      "2.25": 86.646875,
-      "2.5": 82.40625,
-      "2.75": 78.165625,
-      "3": 65.925,
-      "3.25": 53.684375,
-      "3.5": 49.44375,
-      "3.75": 45.203125,
-      "4": 32.9625,
-      "4.25": 20.721875,
-      "4.5": 16.48125,
-      "4.75": 12.240625,
-      "5": 0
-    }
-
-    const totalRating = bike.reviews.reduce((totalStars, review) => {
-      return totalStars += review.rating
-    }, 0)
-
-    let avgRating = totalRating / bike.reviews.length
-    avgRating = (Math.round(avgRating * 4) / 4).toFixed(2)
     coverStars.current.style.width = `${widthsForShowingStars[avgRating]}px`
-  }, [bike])
-
-
+  })
+  
   function cartAnimation(e) {
     e.target.disabled = true
     const child = e.target.children[0]
@@ -140,7 +141,7 @@ const ProductPage = () => {
               <p className="product-review-star">&#11088;</p>
               <p className="product-review-star">&#11088;</p>
             </div>
-            <p className="product-page-reviews">5 out of 5 stars | 4,329 reviews</p>
+            <p className="product-page-reviews">{isNaN(showRating) ? 5 : showRating.toFixed(1)} out of 5 stars | {bike.reviews.length} reviews</p>
           </div>
           <p className="product-page-price">${bike.price}</p>
         </div>
