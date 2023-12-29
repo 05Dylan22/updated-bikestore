@@ -69,7 +69,7 @@ const ShopSectionHero = () => {
                   <div onMouseLeave={(e) => left(e, product)} onMouseEnter={(e) => entered(e, product)} onClick={(e) => changeHeart(e, product)} className="heart-img" style={wishlist[product.name] && {backgroundImage: `url(${imagesIcons.solidHeart})`}}/>
                   <div className="product-info">
                     <p className="product-name">{product.name}</p>
-                    <p className="price-type">{product.make} &#124; {product.price}</p>
+                    <p className="price-type">{product.make} &#124; ${product.price}</p>
                     <Link to={"/productPage"} state={product} className="shop-item-link"><button className="view-product">View Bike</button></Link>
                   </div>
                 </div>

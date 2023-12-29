@@ -2,7 +2,7 @@ import ReviewSection from "../elements/ReviewSection"
 import ProductTopDisplay from "../elements/productTopDisplay"
 import "../styles/productPage.css"
 import { useLocation } from "react-router-dom"
-import { useState, useRef, useEffect, startTransition } from "react"
+import { useState, useRef, useEffect, startTransition, useLayoutEffect } from "react"
 
 
 const ProductPage = () => {
@@ -19,6 +19,10 @@ const ProductPage = () => {
   const l = useRef(null)
   const xl = useRef(null)
   const coverStars = useRef(null)
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
   const widthsForShowingStars = {
     "0": 164.8125,
