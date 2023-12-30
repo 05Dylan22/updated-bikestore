@@ -16,7 +16,9 @@ const ReviewSection = ({bike}) => {
           <button className="leave-review-button">Leave A Review</button>
         </div>
       </div>
-      <Review/>
+      {bike.reviews.map((review) => {
+        return <Review review={review}/>
+      })}
     </section>
   )
 }

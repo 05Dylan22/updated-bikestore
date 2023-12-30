@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Review = () => {
+const Review = ({review}) => {
   const [upvote, setUpvote] = useState(0)
   const [downvote, setDownvote] = useState(0)
   const [voteInfo, setVoteInfo] = useState({voted: false, upOrDown: null})
@@ -24,8 +24,8 @@ const Review = () => {
   return (
     <div className="review">
       <div className="top-reviewer-div">
-        <p className="reviewer-initial">J</p>
-        <p className="reviewer-title">Great Bike And Company</p>
+        <p className="reviewer-initial">{review.name[0]}</p>
+        <p className="reviewer-title">{review.title}</p>
       </div>
       <div className="reviewer-stars">
         <span className="reviewer-star">&#11088;</span>
@@ -35,11 +35,11 @@ const Review = () => {
         <span className="reviewer-star">&#11088;</span>
       </div>
       <div>
-        <p className="reviewer-info">Submitted By: John</p>
-        <p className="reviewer-info">From: Denver</p>
+        <p className="reviewer-info">Submitted By: {review.name}</p>
+        <p className="reviewer-info">From: {review.location}</p>
         <p className="reviewer-info">1 Month Ago</p>
       </div>
-      <p className="reviewer-text">Dang this thing ride good af boi. I suggest you buy one today!!</p>
+      <p className="reviewer-text">{review.review}</p>
       <div className="upvote-downvote-div">
         <button onClick={handleDownVote} className="downvote-btn">&darr;</button>
         <p className="downvote-count">{downvote}</p>
