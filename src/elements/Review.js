@@ -21,6 +21,11 @@ const Review = ({review}) => {
     setDownvote(prev => prev - 1)
   }
 
+  const starArray = []
+  for (let i = 0; i < review.rating; i++) {
+    starArray.push(0)
+  }
+
   return (
     <div className="review">
       <div className="top-reviewer-div">
@@ -28,11 +33,7 @@ const Review = ({review}) => {
         <p className="reviewer-title">{review.title}</p>
       </div>
       <div className="reviewer-stars">
-        <span className="reviewer-star">&#11088;</span>
-        <span className="reviewer-star">&#11088;</span>
-        <span className="reviewer-star">&#11088;</span>
-        <span className="reviewer-star">&#11088;</span>
-        <span className="reviewer-star">&#11088;</span>
+        {starArray.map(() => <span className="reviewer-star">&#11088;</span>)}
       </div>
       <div>
         <p className="reviewer-info">Submitted By: {review.name}</p>

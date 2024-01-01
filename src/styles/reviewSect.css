@@ -84,3 +84,9 @@
 .downvote-count {
   color: red;
 }
+
+.no-reviews {
+  font-size: 45px;
+  text-align: center;
+  margin-top: 45px;
+}
