@@ -9,7 +9,7 @@ const ProductPage = () => {
   const location = useLocation()
   const bike = location.state
   const [selectedColor, setSelectedColor] = useState("black")
-  const [selectedSize, setSelectedSize] = useState(null)
+  const [selectedSize, setSelectedSize] = useState("m")
   const black = useRef(null)
   const silver = useRef(null)
   const red = useRef(null)
@@ -77,6 +77,7 @@ const ProductPage = () => {
   }
 
   function selectSize(e) {
+    if (e.target.id === selectedSize) return
     if (selectedSize === "xs") xs.current.classList.remove("product-size-selected")
     if (selectedSize === "s") s.current.classList.remove("product-size-selected")
     if (selectedSize === "m") m.current.classList.remove("product-size-selected")
