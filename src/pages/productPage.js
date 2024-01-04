@@ -132,7 +132,7 @@ const ProductPage = () => {
 
   return (
     <>
-      {/* <ProductTopDisplay/> */}
+      <ProductTopDisplay/>
       <div className="product-display-info">
         <div className="product-info-left">
           <p className="product-page-name">{bike.name}</p>
