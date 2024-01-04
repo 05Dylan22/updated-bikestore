@@ -208,7 +208,56 @@
             "name": "Lisa", "rating": 2,
             "location": "California", "title": "Best Bike Ever",
             "review": "I am at a loss for words with how pleased I am with this purchase!"
-          }],
+          },
+
+          {
+            "name": "Mason", "rating": 4,
+            "location": "Michigan", "title": "This Things Rad",
+            "review": "Ordered this fro christmas and I could not be more pleased. 100% recommend"
+          },
+          
+          {
+            "name": "Lisa", "rating": 2,
+            "location": "California", "title": "Best Bike Ever",
+            "review": "I am at a loss for words with how pleased I am with this purchase!"
+          },
+
+          {
+            "name": "Mason", "rating": 4,
+            "location": "Michigan", "title": "This Things Rad",
+            "review": "Ordered this fro christmas and I could not be more pleased. 100% recommend"
+          },
+          
+          {
+            "name": "Lisa", "rating": 2,
+            "location": "California", "title": "Best Bike Ever",
+            "review": "I am at a loss for words with how pleased I am with this purchase!"
+          },
+
+          {
+            "name": "Mason", "rating": 4,
+            "location": "Michigan", "title": "This Things Rad",
+            "review": "Ordered this fro christmas and I could not be more pleased. 100% recommend"
+          },
+          
+          {
+            "name": "Lisa", "rating": 2,
+            "location": "California", "title": "Best Bike Ever",
+            "review": "I am at a loss for words with how pleased I am with this purchase!"
+          },
+
+          {
+            "name": "Mason", "rating": 4,
+            "location": "Michigan", "title": "This Things Rad",
+            "review": "Ordered this fro christmas and I could not be more pleased. 100% recommend"
+          },
+          
+          {
+            "name": "Lisa", "rating": 2,
+            "location": "California", "title": "Best Bike Ever",
+            "review": "I am at a loss for words with how pleased I am with this purchase!"
+          }
+        ],
         "id": "EnduroPro",
         "images": ["https://th.bing.com/th/id/OIP.hcOaIkanlIc0YmWyIlLyDwHaEH?pid=ImgDet&rs=1", "https://cdn.shopify.com/s/files/1/2318/5263/products/BMT13491_CT_02_2048x2048.jpg?v=1576894865", "https://th.bing.com/th/id/R.12277274d1550ea31002be68077d56c3?rik=YVnTh%2fpT8LAl5A&pid=ImgRaw&r=0"]
       }

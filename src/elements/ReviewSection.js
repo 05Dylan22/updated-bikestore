@@ -1,14 +1,27 @@
 import "../styles/reviewSect.css"
 import Review from "./Review"
 import RatingBars from "./RatingBars"
+import { useRef, useState } from "react"
 
 const ReviewSection = ({bike}) => {
-  //I WANT TO BE ABLE TO SHOW A CERTAIN NUMBER OF REVIEWS
-  //FOR EXAMPLE IF THERE IS 100 REVIEWS, I WANT THE FIRST 10 SHOWING
-  //THEY WILL BE IN A DIV THAT HAS A MAX HEIGHT WITH AN OVERFLOW Y SET TO SCROLL
-  //THEN WHEN YOU REACH THE BOTTOM THERE WILL BE A SHOW MORE BUTTON
-  //ON THIS BUTTON 10 MORE SHOULD LOAD INTO THE SCROLLABLE DIV
-  //THIS SHOULD NOT ERROR IF LESS THAN 10 REVIEWS ARE GIVEN
+  const reviewSet = useRef([])
+  const [displayReviewSet, setDisplayReviewSect] = useState([])
+  const [firstLoad, setFirstLoad] = useState(true)
+
+  if (firstLoad) {
+    showReviews()
+    setFirstLoad(false)
+  }
+
+  function showReviews() {
+    const tempSet = []
+    for (let i = reviewSet.current.length; i < reviewSet.current.length + 6; i++) {
+      if (bike.reviews[i] === undefined) break
+      tempSet.push(bike.reviews[i])
+    }
+    reviewSet.current = [...reviewSet.current, ...tempSet]
+    setDisplayReviewSect(reviewSet.current)
+  }
 
   return (
     <section className="review-section">
@@ -22,9 +35,12 @@ const ReviewSection = ({bike}) => {
           <button className="leave-review-button">Leave A Review</button>
         </div>
       </div>
-      {bike.reviews.length === 0 ? <h1 className="no-reviews">No Reviews</h1> : bike.reviews.map((review) => {
-        return <Review review={review}/>
-      })}
+      <div className="reviews-container">
+        {bike.reviews.length === 0 ? <h1 className="no-reviews">No Reviews</h1> : displayReviewSet.map((review) => {
+          return <Review review={review}/>
+        })}
+        {bike.reviews.length > reviewSet.current.length ? <p className="show-more" onClick={showReviews}>Show More Reviews</p> : <></>}
+      </div>
     </section>
   )
 }
