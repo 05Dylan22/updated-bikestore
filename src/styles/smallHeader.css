@@ -41,6 +41,29 @@
   cursor: pointer;
 }
 
+.heart-cart-container-s {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.heart-cart-counter-s {
+  position: absolute;
+  margin: 0;
+  color: white;
+  background-color: black;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  height: 14px;
+  width: 14px;
+  top: -8px;
+  right: -4px;
+  border-radius: 50px;
+}
+
 @media screen and (min-width: 270px) {
   .hamburger-bar {
     width: 2rem;

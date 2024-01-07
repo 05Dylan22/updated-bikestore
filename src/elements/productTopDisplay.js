@@ -17,9 +17,6 @@ const ProductTopDisplay = () => {
   const prevTranslate = currentIndex * -window.innerWidth
   let currentTranslate = prevTranslate
 
-  console.log(window.innerWidth)
-
-
   useEffect(() => {
     if (wishlistContents[bike.name]) {
       setStateOfHeart(imagesIcons.solidHeart)
