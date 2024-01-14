@@ -818,4 +818,59 @@
       top: -50px;
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    .product-page-name {
+      font-size: 42px;
+    }
+
+    .product-page-description {
+      font-size: 20px;
+   }
+  }
+
+  @media screen and (min-width: 1400px) {
+    .product-page-name {
+      font-size: 48px;
+    }
+
+    .product-size {
+      width: 300px;
+    }
+
+    .add-to-cart {
+      width: 400px;
+      height: 56px;
+    }
+
+    .item-added-p {
+      left: calc(50% - 40px);
+    }
+
+    @keyframes addCartClicked {
+      0% {
+        background-color: black;
+        position: absolute;
+        border: none;
+        z-index: -1;
+        color: white;
+        border-radius: 200px;
+        width: 5px;
+        height: 5px;
+        opacity: 0.25;
+      }
+    
+      100% {
+        background-color: black;
+        position: absolute;
+        border: none;
+        z-index: -1;
+        color: white;
+        border-radius: 200px;
+        width: 425px;
+        height: 100px;
+        opacity: 1;
+      }
+    }
+  }
 }
