@@ -172,7 +172,7 @@ const ProductPage = () => {
         <p className="item-added-p">Item Added To Cart</p>
         <button onClick={(e) => cartAnimation(e)} className="add-to-cart"><div></div>Add To Cart</button>
       </div>
-      {/* <ReviewSection bike={bike}/> */}
+      {<ReviewSection bike={bike}/>}
     </>
   )
 }
