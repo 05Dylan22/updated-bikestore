@@ -680,6 +680,16 @@
   }
 }
 
+@media screen and (min-width: 825px) {
+  .product-page-description {
+    width: 750px;
+  }
+
+  .product-size {
+    width: 225px;
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .slide {
     height: 400px;
@@ -688,6 +698,11 @@
   .slide > img {
     max-height: 400px;
     max-width: 500px;
+  }
+
+  .product-heart-container {
+    width: 475px;
+    margin-top: 25px;
   }
 
   .arrow1 {
@@ -702,141 +717,68 @@
 
   .product-display-info {
     display: flex;
+    width: 100vw;
+    margin: 0;
     justify-content: space-around;
   }
 
   .product-info-left {
-    width: 600px;
+    width: 45%;
+  }
+
+  .product-page-description {
+    width: 45%;
+    margin-left: 0;
   }
 
   .product-page-name {
-    font-size: 38px;
-    font-weight: 600;
-    margin-bottom: 0;
+    font-size: 38px;   
   }
 
   .product-pick-color {
-    width: 200px;
-    height: 125px;
+    width: 355px;
     margin-left: 112px;
-    margin-top: 42px;
   }
 
   .pick-color-title, .product-size-title {
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: underline;
-    margin: 0;
-    margin-bottom: 12px;
-  }
-
-  .product-colors {
-    display: flex;
-    justify-content: space-between;
+    font-size: 26px;
   }
 
   .empty-product-color-div {
-    height: 60px;
-    width: 60px;
-    border-radius: 120px;
-    cursor: pointer;
-    transition: all 0s;
-  }
-
-  .empty-product-color-div:hover {
-    outline: 2px solid black;
-    outline-offset: 2px;
-  }
-
-  .color-div-selected {
-    outline: 2px solid black;
-    outline-offset: 2px;
-  }
-
-  #black {
-    background-color: black;
-  }
-
-  #silver {
-    background-color: silver;
-  }
-
-  #red {
-    background-color: red;
+    height: 80px;
+    width: 80px;
   }
 
   .product-size-title {
     margin-left: 112px;
-    margin-top: 54px;
+    margin-top: 104px;
   }
 
   .product-pick-size {
     margin-left: 112px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .product-size {
-    height: 38px;
-    width: 225px;
-    border-radius: 2px;
-    margin-bottom: 24px;
-    border: 2px solid black;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.20);
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-
-  .product-size:hover, .product-size-selected {
-    background-color: black;
-    color: white;
+    height: 42px;
+    width: 255px;
+    font-size: 22px;
   }
 
   .cart-btn-container {
-    position: relative;
     margin-left: 112px;
     width: 325px;
+    margin-top: 54px;
   }
 
   .add-to-cart {
-    height: 46px;
-    width: 325px;
-    background-color: black;
-    border: none;
-    font-size: 20px;
-    border-radius: 2px;
-    margin-bottom: 24px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-top: 42px;
-    border: 2px solid black;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.15s;
-    overflow: hidden;
-  }
-
-  .add-to-cart:hover {
-    background-color: transparent;
-    color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    height: 54px;
+    width: 355px;
+    font-size: 26px;
+    margin-left: 0;
   }
 
   .item-added-p {
-    position: absolute;
-    width: 150px;
-    text-align: center;
-    top: -25px;
-    left: calc(50% - 75px);
-    opacity: 0;
+    left: calc(50% - 57.5px);
   }
 
   @keyframes addCartClicked {
@@ -859,8 +801,8 @@
       z-index: -1;
       color: white;
       border-radius: 200px;
-      width: 330px;
-      height: 330px;
+      width: 370px;
+      height: 370px;
       opacity: 1;
     }
   }
@@ -875,48 +817,5 @@
       opacity: 1;
       top: -50px;
     }
-  }
-
-  /* styles that just moved */
-  .arrow1, .arrow2 {
-    width: 50px;
-    height: 50px;
-    font-size: 38px;
-  }
-
-  .arrow1 {
-    left: 0;
-    top: -175px;
-  }
-
-  .arrow2 {
-    right: 0;
-    top: -175px;
-  }
-
-  .slider-nav-buttons {
-    width: 550px;
-  }
-
-  .slider-dot, .active-dot {
-    height: 8px;
-    width: 8px;
-    margin-left: 15px;
-    margin-bottom: 18px;
-  }
-
-  .active-dot {
-    height: 9.25px;
-    width: 9.25px;
-  }
-
-  .product-heart-container {
-    width: 380px;
-    margin-top: 25px;
-  }
-
-  .product-heart {
-    width: 35px;
-    height: 35px;
   }
 }
