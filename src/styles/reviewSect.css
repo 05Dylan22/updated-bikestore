@@ -208,6 +208,29 @@
   }
 }
 
+@media screen and (min-width: 400px) {
+  .review-sect-heading {
+    font-size: 32px;
+  }
+
+  .rating-bar-head, .star-rating-bar {
+    margin-left: 12px;
+  }
+
+  .star-rating-bar {
+    max-width: 325px;
+    height: 32px;
+  }
+
+  .leave-review-title {
+    margin-left: 12px;
+  }
+
+  .leave-review-button {
+    margin-left: 12px;
+  }
+}
+
 
 @media screen and (min-width: 1000px) {
   .review-section {
@@ -229,11 +252,6 @@
 
   .bar-and-percentage {
     height: 45px;
-  }
-
-  .star-rating-bar {
-    height: 32px;
-    width: 325px;
   }
 
   .bar-filled-percentage {
