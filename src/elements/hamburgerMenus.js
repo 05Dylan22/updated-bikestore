@@ -1,11 +1,16 @@
 import "../styles/hamburgerMenus.css"
 import { imagesIcons } from "../App"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { handleIcons } from "../redux/handleIcons"
+import useDetectOutsideClick from "../hooks/detectOutsideClick"
+import { useRef } from "react"
 
 const HamburgerMenus = () => {
   const dispatch = useDispatch()
+  const popup = useRef(null)
+
+  useDetectOutsideClick(popup)
 
   function closeHamburger() {
     dispatch(handleIcons({identifier: "HAMBURGER"}))
@@ -13,7 +18,7 @@ const HamburgerMenus = () => {
 
   return (
     <>
-      <div className="hamburger-menus-container">
+      <div ref={popup} className="hamburger-menus-container">
         <div className="top-hamburger">
           <img className="hamburger-logo" src={imagesIcons.logo} alt="logo" />
           <img onClick={closeHamburger} className="close-hamburger" src={require("../images+icons/search.cancel.icon.png")} alt="close menu" />
