@@ -1,6 +1,12 @@
 import "../styles/404.css"
+import { useLayoutEffect } from "react"
 
 const NotFound = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <section className="notfound-section">
       <h1 className="notfound-title">Hmm... The Page You're Searching For Couldn't Be Found.</h1>

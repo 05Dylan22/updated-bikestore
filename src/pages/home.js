@@ -2,8 +2,14 @@ import "../styles/home.css"
 import ScrollingBanner from "../elements/scrollingBanner"
 import ShopPopular from "../elements/shopPopular"
 import BlogPost from "../elements/blogPost"
+import { useLayoutEffect } from "react"
 
 const Home = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <section className="home-page">
       <section className="hero-home">
