@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import {useLocation, Link} from "react-router-dom"
 import "../styles/shoppingHero.css"
 import { imagesIcons } from "../App"
+import { handleIcons } from "../redux/handleIcons"
 import { useDispatch, useSelector } from "react-redux"
 import { addItem, removeItem } from "../redux/handleWishlist"
 
@@ -21,6 +22,10 @@ const ShopSectionHero = () => {
     setMyData(response)
     setIsLoading(false)
   }
+
+  useEffect(() => {
+    dispatch(handleIcons({type: "close"}))
+  })
 
   useEffect(() => {
     window.scrollTo(0, 0)

@@ -49,10 +49,12 @@
   z-index: 10;
   top: 6px;
   cursor: pointer;
-  right: 14px;
+  background-color: transparent;
+  padding: 4px;
+  right: 4px;
   background-image: url(../images+icons/heart.png);
   background-position: center;
-  background-size: contain;
+  background-size: 95%;
   background-repeat: no-repeat;
 }
 
