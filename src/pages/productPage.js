@@ -3,6 +3,7 @@ import ProductTopDisplay from "../elements/productTopDisplay"
 import "../styles/productPage.css"
 import { useLocation } from "react-router-dom"
 import { handleIcons } from "../redux/handleIcons"
+import { addToCart} from "../redux/handleCart"
 import { useState, useRef, useEffect, useLayoutEffect } from "react"
 import { useDispatch } from "react-redux"
 
@@ -63,8 +64,8 @@ const ProductPage = () => {
     dispatch(handleIcons({type: "close"}))
     coverStars.current.style.width = `${widthsForShowingStars[avgRating]}px`
   })
-  
-  function cartAnimation(e) {
+
+  function animateItemAdded(e) {
     e.target.disabled = true
     const child = e.target.children[0]
     child.style.animation = "addCartClicked 0.70s ease-in-out"
@@ -74,6 +75,11 @@ const ProductPage = () => {
       e.target.previousElementSibling.style.animation = ""
       e.target.disabled = false
     }, 750)
+  }
+  
+  function addBikeToCart(e) {
+    animateItemAdded(e)
+    dispatch(addToCart(bike))
   }
 
   function selectColor(e) {
@@ -174,7 +180,7 @@ const ProductPage = () => {
         </div>
         <div className="cart-btn-container">
           <p className="item-added-p">Item Added To Cart</p>
-          <button onClick={(e) => cartAnimation(e)} className="add-to-cart"><div></div>Add To Cart</button>
+          <button onClick={(e) => addBikeToCart(e)} className="add-to-cart"><div></div>Add To Cart</button>
         </div>
         {<ReviewSection bike={bike}/>}
       </>
