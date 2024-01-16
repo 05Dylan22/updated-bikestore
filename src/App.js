@@ -5,13 +5,12 @@ import "./styles/wishlist.css"
 import Home from './pages/home';
 import { Route, Routes } from 'react-router-dom';
 import {DataProvider} from './context/DataContext';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import LargeHeader from './elements/largeHeader';
 import SmallHeader from './elements/smallHeader';
 import NotFound from './pages/404';
 import Footer from './elements/footer';
-import ShoppingCategory from './pages/shoppingCategory';
-import Wishlist from './elements/wishlist';
+import ShoppingPage from './pages/shoppingPage';
 import ProductPage from './pages/productPage';
 
 export const imagesIcons = {
@@ -47,7 +46,7 @@ function App() {
         {largeScreen ? <LargeHeader/> : <SmallHeader/>}
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/shoppingCategory" element={<ShoppingCategory/>}/>
+          <Route path="/shoppingCategory" element={<ShoppingPage/>}/>
           <Route path="/productPage" element={<ProductPage/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
