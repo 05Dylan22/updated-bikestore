@@ -20,7 +20,7 @@ const FilledCart = () => {
   return (
     <>
     {cartItems.map((bike) => (
-      <CartItem bike={bike}/>
+      <CartItem key={bike.name} bike={bike}/>
     ))}
       <div className="cart-totals-div">
         <div className="cart-costs">

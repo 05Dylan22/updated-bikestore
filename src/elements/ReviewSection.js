@@ -36,8 +36,8 @@ const ReviewSection = ({bike}) => {
         </div>
       </div>
       <div className="reviews-container">
-        {bike.reviews.length === 0 ? <h1 className="no-reviews">No Reviews</h1> : displayReviewSet.map((review) => {
-          return <Review review={review}/>
+        {bike.reviews.length === 0 ? <h1 className="no-reviews">No Reviews</h1> : displayReviewSet.map((review, index) => {
+          return <Review key={review.name + index} review={review}/>
         })}
         {bike.reviews.length > reviewSet.current.length ? <p className="show-more" onClick={showReviews}>Show More Reviews</p> : <></>}
       </div>

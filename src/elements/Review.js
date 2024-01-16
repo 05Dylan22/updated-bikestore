@@ -33,7 +33,7 @@ const Review = ({review}) => {
         <p className="reviewer-title">{review.title}</p>
       </div>
       <div className="reviewer-stars">
-        {starArray.map(() => <span className="reviewer-star">&#11088;</span>)}
+        {starArray.map((star, index) => <span key={index} className="reviewer-star">&#11088;</span>)}
       </div>
       <div>
         <p className="reviewer-info">Submitted By: {review.name}</p>

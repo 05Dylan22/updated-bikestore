@@ -55,7 +55,7 @@ const SearchPage = () => {
       </div>
       <div className="search-list-div">
         <ul className="search-list">
-          {matchedTerms.map((result) => <Link state={result.state} to={result.sendTo} className="search-list-item"><li key={result.term}>{result.term}</li></Link>)}
+          {matchedTerms.map((result) => <Link key={result.term} state={result.state} to={result.sendTo} className="search-list-item"><li>{result.term}</li></Link>)}
         </ul>
       </div>
     </div>

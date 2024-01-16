@@ -13,7 +13,7 @@ const CartItem = ({bike}) => {
       dispatch(removeFromCart(bike))
     }, 550)
   }
-
+ 
   return (
     <div ref={cartItem} key={cartContents[bike].name} className="cart-item">
       <button className="remove-cart-item" onClick={() => removeCartItem(bike)}>X</button>

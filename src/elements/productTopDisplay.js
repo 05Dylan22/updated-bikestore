@@ -97,6 +97,7 @@ const ProductTopDisplay = () => {
   function leftProductHeart() {
     if (!wishlistContents[bike.name]) setStateOfHeart(imagesIcons.heartOutline)
   }
+
   return (
     <>
       <div className="product-heart-container">

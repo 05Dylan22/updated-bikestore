@@ -23,23 +23,6 @@
   font-weight: 600;
 }
 
-.home-hero-cta {
-  background-color: black;
-  color: white;
-  font-weight: bold;
-  margin-left: 6px;
-  border-radius: 2px;
-  border: 2px solid white;
-  cursor: pointer;
-  outline: 3px solid black;
-  transition: all 0.15s;
-}
-
-.home-hero-cta:hover {
-  background-color: rgb(51, 51, 51);
-  outline-color: rgb(51, 51, 51);
-}
-
 .shop-pop-title {
   text-align: center;
 }
@@ -181,12 +164,6 @@
     margin-bottom: 24px;
   }
 
-  .home-hero-cta {
-    width: 175px;
-    height: 32px;
-    font-size: 16px;
-  }
-
   .shop-pop-title {
     font-size: 28px;
   }
@@ -269,11 +246,6 @@
     max-width: 534px;
   }
 
-  .home-hero-cta {
-    width: 205px;
-    height: 36px;
-  }
-
   .mission-statement-title {
     font-size: 42px;
   }
@@ -318,13 +290,6 @@
     width: 400px;
     font-size: 20px;
     margin-bottom: 32px;
-  }
-
-  .home-hero-cta {
-    margin-top: 24px;
-    font-size: 20px;
-    width: 255px;
-    height: 38px;
   }
 
   .popular-section {
