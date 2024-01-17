@@ -1,14 +1,50 @@
 import "../styles/footer.css"
 import {Link} from "react-router-dom"
+import { useRef } from "react"
 
 const Footer = () => {
+  const newsletterEmail = useRef(null)
+
+  function validateEmail() {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(newsletterEmail.current.value);
+  }
+
+  function resetNewsletter() {
+    newsletterEmail.current.value = ""
+    newsletterEmail.current.style.color = "black"
+    newsletterEmail.current.style.backgroundColor = "white"
+  }
+
+  function signupNewsletter() {
+    const validEmail = validateEmail()
+    if (!validEmail) {
+      newsletterEmail.current.value = "INVALID EMAIL"
+      newsletterEmail.current.style.color = "white"
+      newsletterEmail.current.style.backgroundColor = "red"
+      setTimeout(() => {
+        resetNewsletter()
+      }, 2000)
+      return
+    }
+    if (validEmail) {
+      newsletterEmail.current.value = "YOU'RE SIGNED UP!"
+      newsletterEmail.current.style.color = "white"
+      newsletterEmail.current.style.backgroundColor = "black"
+      setTimeout(() => {
+        resetNewsletter()
+      }, 2000)
+      return
+    }
+  }
+  
   return (
     <footer className="footer">
       <p className="newsletter-title">Join Our Newsletter</p>
       <p className="newsletter-subtitle">The Everything Bikes newsletter is your best source for updates on sales, coupon codes and each of our blogs as soon as they're published.</p>
       <div className="signup-section">
-        <input className="newsletter-signup" type="email" placeholder="Enter Your Email..." />
-        <button className="signup-btn">Submit</button>
+        <input ref={newsletterEmail} className="newsletter-signup" type="email" placeholder="Enter Your Email..." />
+        <button type="submit" onClick={() => signupNewsletter()} className="signup-btn">Submit</button>
       </div>
       <p className="signup-consent">By submitting this form, you consent to sending the above information to Everything Bikes, which will be stored in the United States. For a detailed explanation of Everything Bike's collection and use of personal data please see the Privacy Policy & Terms of Use.</p>
       <div className="social-links">

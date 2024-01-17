@@ -112,12 +112,13 @@
   }
 
   .newsletter-signup {
-    height: 100%;
+    height: 30px;
     width: 50%;
+    font-size: 12px;
   }
 
   .signup-btn {
-    height: 110%;
+    height: 34px;
   }
 
   .signup-consent {
@@ -157,6 +158,10 @@
 
   .social-links {
     width: 65vw;
+  }
+
+  .newsletter-signup {
+    font-size: 13px;
   }
 
   .sitemap {
@@ -236,10 +241,11 @@
   .newsletter-signup {
     height: 34px;
     width: 70%;
+    font-size: 14px;
   }
 
   .signup-btn {
-    height: 37.5px;
+    height: 38px;
   }
 
   .signup-consent {
