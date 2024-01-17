@@ -124,6 +124,7 @@
   border: 1px solid black;
   border-radius: 2px;
   margin: auto;
+  object-fit: cover;
 }
 
 .blog-desc {
