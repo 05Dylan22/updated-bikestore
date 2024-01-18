@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useLayoutEffect, useState } from "react"
 import {useLocation} from "react-router-dom"
 import "../styles/shoppingHero.css"
 import { handleIcons } from "../redux/handleIcons"
@@ -17,6 +17,10 @@ const ShoppingPage = () => {
 
   useEffect(() => {
     dispatch(handleIcons({type: "close"}))
+  })
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
   })
 
   useEffect(() => {

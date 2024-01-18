@@ -7,19 +7,19 @@
     },
 
     "hardtailHero": {
-      "img": "https://th.bing.com/th/id/OIP.Ox_FpoYpNxLujZRVggtmkQHaEs?pid=ImgDet&rs=1",
+      "img": "https://th.bing.com/th/id/R.cf9a48eb04ae7652b6b6cbd4a0f76fc9?rik=Y29A2dr2DkcJKQ&pid=ImgRaw&r=0",
       "category": "Hard Tail",
       "description": "Hardtails are the pure mountain machines. They'll connect you to the trail and get you around the trail quickly and efficiently. They're ideal for cross country and trail riding."
     },
 
     "crosscountryHero": {
-      "img": "https://ep1.pinkbike.org/p4pb5300714/p4pb5300714.jpg",
+      "img": "https://c.pxhere.com/images/cb/cf/2989cec033977d35c21acd9c869e-1434637.jpg!d",
       "category": "Cross Country",
       "description": "From cutting-edge carbon race bikes to versatile models made for loads of fun on light trails, our cross country bikes are fast, lightweight, and efficient."
     },
 
     "trailHero": {
-      "img": "https://th.bing.com/th/id/OIP.JlnJop76pgL5xJ4KYjRXgAHaFj?pid=ImgDet&rs=1",
+      "img": "https://static0.reviewthisimages.com/wordpress/wp-content/uploads/2020/02/MountainBikeVT-e1580593564749.jpg",
       "category": "Trail",
       "description": "Trail bikes are versatile, light, and exceedingly capable. They climb just as well as they descend, making them ideal for everything from enduro racing to ripping laps after work."
     },
@@ -37,7 +37,7 @@
     },
 
     "fatHero": {
-      "img": "https://th.bing.com/th/id/OIP.W2xzItUak_46arJugAj2AwHaDo?pid=ImgDet&rs=1",
+      "img": "https://images.singletracks.com/blog/wp-content/uploads/2014/01/G1323269.jpg",
       "category": "Fat",
       "description": "Extra-wide fat bike tires let you turn any terrain into your next adventure. All that rubber delivers unbelievable traction and stability no matter where you roam."
     }
@@ -62,7 +62,7 @@
         "description": "As mountain bikes continue to get longer and slacker, many riders find themselves gravitating towards balanced options like the Ripley XT Factory Mountain Bike. With 120mm of DW-Link travel, it can still get loose on descents, but the 66.5-degree head tube angle still makes the bike plenty nimble for steep switchbacks and tight terrain. The steep 76-degree seat tube angle puts us in an optimal position for pedaling all day long, and the DW-Link rear suspension is incredibly supportive while also producing excellent rear-wheel traction on techy climbs. The beauty of DW-Link is that it's just as good on the up as it is on the down, providing great cornering grip, and Ibis specs a 130mm travel fork to further boost the bike's descending capabilities.",
         "reviews": [],
         "id": "RipleyXT",
-        "images": ["https://cdn.shopify.com/s/files/1/2318/5263/products/BMT14736_CM_02_800x800.jpg?v=1604118801", "https://th.bing.com/th/id/OIP.wXUbuBjYUA2T0biswi5legHaEK?pid=ImgDet&rs=1", "https://p.vitalmtb.com/photos/stories/2019/04/30/full_ripley4_build_blue_xtr_257605.jpg"]
+        "images": ["https://cdn.shopify.com/s/files/1/2318/5263/products/BMT14736_CM_02_800x800.jpg?v=1604118801", "https://p.vitalmtb.com/photos/products/14843/photos/16028/s1600_2014_Ibis_Ripley_29_Bike_Blue_with_XTR_build.jpg?1403901811", "https://p.vitalmtb.com/photos/stories/2019/04/30/full_ripley4_build_blue_xtr_257605.jpg"]
       },
 
       {
@@ -72,7 +72,7 @@
         "reviews": [],
         "id": "TrekRemedy99",
         "description": "The Trek Remedy is no spring chicken. It's been around the block, seen what trails have to offer, and translated into a rideable platform. Green to double blacks approved! The slack geometry, 27.5 wheels, and long travel will impress you on the downhill, but this bike will surprise you on the uphill too. The trail geo isn’t extreme in any direction, but it’s fun riding in every direction. Tweak the geometry .5° by flipping the Mino-Link on the seat stay to cater to varying trail demands. If you've been struggling to find your next bike, this might be the Remedy.",
-        "images": ["https://cdn.shopify.com/s/files/1/2318/5263/products/BMT14720_CM_02_506aad67-bb49-4576-8d01-04741d7fecf4_800x800.jpg?v=1604120096","https://th.bing.com/th/id/OIP.zfcwwh61jM589yCZ_MfGEQHaEK?pid=ImgDet&rs=1", "https://www.allterraincycles.co.uk/Images/Original/155651_2.jpg"]
+        "images": ["https://cdn.shopify.com/s/files/1/2318/5263/products/BMT14720_CM_02_506aad67-bb49-4576-8d01-04741d7fecf4_800x800.jpg?v=1604120096","https://www.hellovelo.co/wp-content/uploads/2018/12/Remedy99275_19_24506_B_Primary_mr.jpg", "https://cdn.shopify.com/s/files/1/2318/5263/products/BMT17174_PH1_02_2048x2048.jpg?v=1604129325"]
       }
     ],
 
@@ -115,7 +115,7 @@
         "description": "The Chameleon has been among our top picks for hardtail trail bikes for some time thanks to its even-handed composure, and the Chameleon MX brings an added fun factor into the equation. The mixed-wheel version allows for effortless Scandinavian flicks, super fun jumping characteristics, and possibly even a better-fitting bike for smaller riders. This S-build features SRAM GX drivetrain components for crisp shifting and performance-focused G2 R hydraulic disc brakes for taking on steeper trails with confidence.",
         "reviews": [],
         "id": "ChameleonS",
-        "images": ["https://th.bing.com/th/id/R.217e3e0d09b547bbbaeb1ad5433ea18b?rik=QlGQ9qZcjGAvfw&riu=http%3a%2f%2fwww.backcountry.com%2fimages%2fitems%2f900%2fSNZ%2fSNZ002P%2fDARBLU.jpg&ehk=HlKrLQ4gqv4vzYc987TSNSAccmZcT2443EieS64Kdis%3d&risl=&pid=ImgRaw&r=0", "https://th.bing.com/th/id/R.d2f5629062539938a45da3ba5ddb460b?rik=uFQPrF7TYWIBiw&riu=http%3a%2f%2fwww.bikepacking.com%2fwp-content%2fuploads%2f2019%2f01%2fsanta-cruz-chameleon-c-review_14.jpg&ehk=BbnO3hmK%2fgxGUgJYNEfoxIK2Gx6EanQ14h86ZqmjuFc%3d&risl=&pid=ImgRaw&r=0", "https://www.leisurelakesbikes.com/images/santacruz_chameleon_alloy_d_fog.jpg"]
+        "images": ["https://th.bing.com/th/id/OIP.L8jNfMGjiWT15ppjEP5ULQHaE7?rs=1&pid=ImgDetMain", "https://th.bing.com/th/id/R.d2f5629062539938a45da3ba5ddb460b?rik=uFQPrF7TYWIBiw&riu=http%3a%2f%2fwww.bikepacking.com%2fwp-content%2fuploads%2f2019%2f01%2fsanta-cruz-chameleon-c-review_14.jpg&ehk=BbnO3hmK%2fgxGUgJYNEfoxIK2Gx6EanQ14h86ZqmjuFc%3d&risl=&pid=ImgRaw&r=0", "https://www.leisurelakesbikes.com/images/santacruz_chameleon_alloy_d_fog.jpg"]
       },
 
       {
@@ -125,7 +125,7 @@
         "description": "Light, durable, butted, and hydroformed 6061 aluminum frame features 73mm threaded bottom bracket, internal and cable routing. Using most of the modern features, Xtrada models utilize slack head tubes and steep seat tube angles to ensure that the bike handles perfectly and travels effortlessly up and down the mountain.",
         "reviews": [],
         "id": "PolygonXtrada",
-        "images": ["https://th.bing.com/th/id/R.e24f297b0e173b6a0201af12cc6ba723?rik=LfKe4GWdxU7rzw&pid=ImgRaw&r=0", "https://th.bing.com/th/id/OIP.QZhlo_MwRp7WWYVcidJWDAHaEj?pid=ImgDet&rs=1", "https://ik.imagekit.io/r3wxc114qv/assets/alt_1/4875592.jpg?20200907152237"]
+        "images": ["https://crossmountain.cl/images/banners/8ace35cf1923c50dbd9d6547af119baa.jpg", "https://th.bing.com/th/id/OIP.QZhlo_MwRp7WWYVcidJWDAHaEj?pid=ImgDet&rs=1", "https://ik.imagekit.io/r3wxc114qv/assets/alt_1/4875592.jpg?20200907152237"]
       },
 
       {
@@ -135,7 +135,7 @@
         "description": "The Rapide FS CRX is a full-carbon full suspension XC bike designed for knock-your-socks-off speed uphill and down. It’s light — just 23.5 lbs for a medium with tubeless tires — efficient and remarkably capable in technical terrain. The Rapide FS uses a flex pivot suspension design that shaves weight, requires less hardware and gives the bike a notably lively characteristic downhill. It also minimizes pedal bob, enhances comfort and improves performance under braking. Don’t just take our word for it, the Rapide FS CRX’s handling has earned it rave reviews from independent cycling media.",
         "reviews": [],
         "id": "VitusRapide",
-        "images": ["https://cdn.shopify.com/s/files/1/0365/1272/7173/products/Vitus_Rapide-FS-CRX-Mountain-Bike-2021_02_1200x1200.jpg?v=1612800643", "https://p.vitalmtb.com/photos/products/28818/photos/55953/s1600_2020_Vitus_Rapide_CRX.jpg?1580143683", "https://th.bing.com/th/id/OIP.58wcRs56dB94RKvXxdQTggHaDF?pid=ImgDet&rs=1"]
+        "images": ["https://cdn.shopify.com/s/files/1/0365/1272/7173/products/Vitus_Rapide-FS-CRX-Mountain-Bike-2021_02_1200x1200.jpg?v=1612800643", "https://p.vitalmtb.com/photos/products/28818/photos/55953/s1600_2020_Vitus_Rapide_CRX.jpg?1580143683", "https://th.bing.com/th/id/R.a568f3bfb22ab37fdc01ba0e6443ed33?rik=3zDQNyxmtc7f1g&riu=http%3a%2f%2fvitusbikes.com%2fcdn%2fshop%2ffiles%2f720753934-img-03_1200x1200.jpg%3fv%3d1692270627&ehk=DkOaZNptVEAaIyGpg4x%2f4Zz7q%2fPL5EtzDwxQYNXmFzw%3d&risl=&pid=ImgRaw&r=0"]
       }
     ],
 
@@ -157,7 +157,7 @@
         "description": "This mid-tier build kit starts with Shimano's 12-speed XT drivetrain for crisp, reliable shifting, and a wide gear range to get up those climbs. A Fox Factory 38 fork brings along 160mm of travel for eating up big hits and adding torsional stiffness to keep us on our line in high-speed sections. Ibis spec'd their in-house Blackbird Send wheelset to make pinch flats a thing of the past, and a set of Shimano XT 4-piston brakes add high stopping power. The Ibis Ripmo XT is a one-bike quiver for riders looking to hit the bike park one day and tackle an all-day trail mission the next.",
         "reviews": [],
         "id": "RipmoXT",
-        "images": ["https://th.bing.com/th/id/R.1e465fdf783c337bda22697519181da1?rik=zoswCRSkdIhGUQ&pid=ImgRaw&r=0", "https://cdn.shopify.com/s/files/1/0904/4132/files/ripmo2of4_f6aa7ed1-52b1-47e5-ae4d-3806c74af4dc.jpg?v=1543614545", "https://p.vitalmtb.com/photos/stories/2018/03/26/max_IMC1748_845322.jpg"]
+        "images": ["https://p.vitalmtb.com/photos/products/22470/photos/33392/s1600_Ibis_Ripmo_with_Shimano_XT_Black_Olive.jpg?1522453435", "https://cdn.shopify.com/s/files/1/0904/4132/files/ripmo2of4_f6aa7ed1-52b1-47e5-ae4d-3806c74af4dc.jpg?v=1543614545", "https://p.vitalmtb.com/photos/stories/2018/03/26/max_IMC1748_845322.jpg"]
       },
 
       {
@@ -167,7 +167,7 @@
         "description": "The MTR 8.9 offers a beautifully balanced specification, using the same frame geometry and rear suspension set up as the 9.0, but with our X7 triple butted alloy. Aggressive trail riding places big demands on your equipment, and the high-performing kit on the MTR 8.9 is more than up to the task.",
         "reviews": [],
         "id": "MTR89",
-        "images": ["https://th.bing.com/th/id/OIP.1kgKho85D0rCTPHYyiYNpwHaHa?pid=ImgDet&rs=1", "https://th.bing.com/th/id/OIP.9ZC21Fe33HfJo8Kn6oprVgHaEK?pid=ImgDet&rs=1", "https://images.immediate.co.uk/production/volatile/sites/21/2019/03/boardman-mtr-89-01-1544188600384-1adjcuj8rojyb-d6ace63.jpg?quality=90&resize=620,413"]
+        "images": ["https://i1.adis.ws/i/washford/526597/Boardman-MTR-8.8-Mountain-Bike", "https://th.bing.com/th/id/OIP.9ZC21Fe33HfJo8Kn6oprVgHaEK?pid=ImgDet&rs=1", "https://images.immediate.co.uk/production/volatile/sites/21/2019/03/boardman-mtr-89-01-1544188600384-1adjcuj8rojyb-d6ace63.jpg?quality=90&resize=620,413"]
       }
     ],
 
@@ -179,7 +179,7 @@
         "description": "The new Yeti SB160 is a race-bred enduro machine just begging to carry us to the top of the podium. With 160mm of Switch Infinity rear travel, this rig has one goal. Get down as fast as possible. 160mm of Switch Infinity rear travel eats up big hits while still letting us pedal up to the top efficiently, while the refined C/Series carbon layup strikes a balance between impressive weight savings and exceptional durability. Yeti’s engineers added size-specific chain stays and seat tube angles to create a consistent ride feel across the entire size range, while the 64-degree headtube angle and big 29in wheels give us precision handling and stability at speed so we can send it with confidence.",
         "reviews": [],
         "id": "SB160C1",
-        "images": ["https://th.bing.com/th/id/OIP.3_mVQR12qZytKAl_dHTuUgHaHa?pid=ImgDet&rs=1", "https://th.bing.com/th/id/OIP.h_bwP-XaOuT4uvM3wMCsGQHaE7?pid=ImgDet&rs=1", "https://th.bing.com/th/id/OIP.9LjVyLcb3MShtGuUTYHN0wHaEp?pid=ImgDet&rs=1"]
+        "images": ["https://basecampcyclery.com/wp-content/uploads/2022/04/nn3tfzfpqbohcav92gje-1.png", "https://th.bing.com/th/id/OIP.h_bwP-XaOuT4uvM3wMCsGQHaE7?pid=ImgDet&rs=1", "https://th.bing.com/th/id/OIP.9LjVyLcb3MShtGuUTYHN0wHaEp?pid=ImgDet&rs=1"]
       },
 
       {
@@ -189,7 +189,7 @@
         "description": "Slash 9.9 is the fastest enduro mountain bike in the lineup, so it's no surprise it's the go-to ride for the pros of Trek Factory Racing Enduro. A full carbon frame, all-new hard-charging suspension with RockShox Flight Attendant, fast-rolling carbon wheels, and a SRAM wireless electronic drivetrain and dropper make this top-of-the-line ride the undisputed king of enduro.",
         "reviews": [],
         "id": "Slash99XX1",
-        "images": ["https://th.bing.com/th/id/R.23fb60ee9ebdc20b86acaf301be98686?rik=ekBy%2fMIN6oU%2fQg&pid=ImgRaw&r=0", "https://th.bing.com/th/id/R.8ae5f1597d287ef86a83b5012e5fe675?rik=88k3GH4QdEnzqQ&pid=ImgRaw&r=0", "https://th.bing.com/th/id/OIP.eT5NRrllST9l155eHglxmAHaFj?pid=ImgDet&rs=1"]
+        "images": ["https://p.vitalmtb.com/photos/products/35156/photos/82254/s1600_photo_653436.jpg?1633804048", "https://www.superbike8.de/out/pictures/master/product/1/Slash99XX1FA_22_36413_A_Primary.jpg", "https://th.bing.com/th/id/OIP.eT5NRrllST9l155eHglxmAHaFj?pid=ImgDet&rs=1"]
       },
 
       {
@@ -259,7 +259,7 @@
           }
         ],
         "id": "EnduroPro",
-        "images": ["https://th.bing.com/th/id/OIP.hcOaIkanlIc0YmWyIlLyDwHaEH?pid=ImgDet&rs=1", "https://cdn.shopify.com/s/files/1/2318/5263/products/BMT13491_CT_02_2048x2048.jpg?v=1576894865", "https://th.bing.com/th/id/R.12277274d1550ea31002be68077d56c3?rik=YVnTh%2fpT8LAl5A&pid=ImgRaw&r=0"]
+        "images": ["https://th.bing.com/th/id/OIP.hcOaIkanlIc0YmWyIlLyDwHaEH?pid=ImgDet&rs=1", "https://cdn.shopify.com/s/files/1/2318/5263/products/BMT13491_CT_02_2048x2048.jpg?v=1576894865", "https://th.bing.com/th/id/R.0b575e07fab5ca41fcae1ee40ee10804?rik=JvppRd8TIpj0qw&pid=ImgRaw&r=0"]
       }
     ],
 
