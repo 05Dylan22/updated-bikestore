@@ -19,6 +19,7 @@
   margin: auto;
   width: calc(75% + 16px);
   margin-bottom: 5px;
+  margin-top: 50px;
 }
 
 .leave-rating-stars {
@@ -26,6 +27,12 @@
   width: calc(75% + 16px);
   margin: auto;
   margin-bottom: 25px;
+}
+
+.reviewing-star-img {
+  height: 50px;
+  width: 60px;
+  cursor: pointer;
 }
 
 .reviewing-star {
@@ -37,12 +44,20 @@
 .write-heading {
   margin: auto;
   width: calc(75% + 16px);
-  margin-bottom: 50px;
   height: 32px;
   font-size: 16px;
   border-radius: 2px;
   border: 1px solid black;
   text-indent: 8px;
+}
+
+.max-characters {
+  color: red;
+  font-size: 12px;
+  margin: auto;
+  margin-top: 5px;
+  width: calc(75% + 16px);
+  text-align: end;
 }
 
 .leave-review-textarea {
