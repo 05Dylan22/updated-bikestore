@@ -42,7 +42,7 @@ const SearchPage = () => {
 
   function findMatchedTerms(e) {
     const newMatched = []
-    searchTerms.forEach((searchTerm) => {
+    searchTerms?.forEach((searchTerm) => {
       if (searchTerm.term.includes(e.target.value.toLowerCase())) newMatched.push(searchTerm)
     })
     setMatchedTerms(newMatched)
