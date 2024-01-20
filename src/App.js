@@ -4,7 +4,6 @@ import "./styles/smallHeader.css"
 import "./styles/wishlist.css"
 import Home from './pages/home';
 import { Route, Routes } from 'react-router-dom';
-import {DataProvider} from './context/DataContext';
 import { useState, useEffect } from 'react';
 import LargeHeader from './elements/largeHeader';
 import SmallHeader from './elements/smallHeader';
@@ -42,7 +41,6 @@ function App() {
   window.addEventListener("resize", checkScreenSize)
 
   return (
-    <DataProvider>
     <div className="App">
         {largeScreen ? <LargeHeader/> : <SmallHeader/>}
         <Routes>
@@ -54,7 +52,6 @@ function App() {
         </Routes>
         <Footer/>
     </div>
-    </DataProvider>
   );
 }
 
