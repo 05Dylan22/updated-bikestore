@@ -2,8 +2,9 @@ import "../styles/reviewSect.css"
 import Review from "./Review"
 import RatingBars from "./RatingBars"
 import { useRef, useState } from "react"
+import { Link } from "react-router-dom"
 
-const ReviewSection = ({bike}) => {
+const ReviewSection = ({bike, categoryName, index}) => {
   const reviewSet = useRef([])
   const [displayReviewSet, setDisplayReviewSect] = useState([])
   const [firstLoad, setFirstLoad] = useState(true)
@@ -32,7 +33,7 @@ const ReviewSection = ({bike}) => {
         </div>
         <div className="leave-review-div">
           <h2 className="leave-review-title">Satisfied With Your Purchase? Let Us Know How It Went.</h2>
-          <button className="leave-review-button">Leave A Review</button>
+          <Link to={"../LeaveReview"} state={{categoryName: categoryName, index: index}} className="leave-review-button">Leave A Review</Link>
         </div>
       </div>
       <div className="reviews-container">

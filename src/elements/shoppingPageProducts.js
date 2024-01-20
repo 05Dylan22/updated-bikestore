@@ -3,7 +3,7 @@ import { addItem, removeItem } from "../redux/handleWishlist"
 import { imagesIcons } from "../App"
 import { Link } from "react-router-dom"
 
-const ShoppingPageProducts = ({data}) => {
+const ShoppingPageProducts = ({data, categoryName}) => {
   const dispatch = useDispatch()
   const wishlist = useSelector((state) => state.handleWishlist.wishlistContents)
 
@@ -31,7 +31,7 @@ const ShoppingPageProducts = ({data}) => {
   return (
     <section>
       {
-        data.map((product) => {
+        data.map((product, index) => {
           return (
             <div className="showcase-product-div" key={product.id}>
               <img className="showcase-img" src={product.images[0]} alt="bike name"/>
@@ -39,7 +39,7 @@ const ShoppingPageProducts = ({data}) => {
               <div className="product-info">
                 <p className="product-name">{product.name}</p>
                 <p className="price-type">{product.make} &#124; ${product.price}</p>
-                <Link to={"/productPage"} state={product} className="shop-item-link"><button className="view-product">View Bike</button></Link>
+                <Link to={"/productPage"} state={{product: product, categoryName: categoryName, index: index}} className="shop-item-link"><button className="view-product">View Bike</button></Link>
               </div>
             </div>
           )

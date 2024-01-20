@@ -8,7 +8,7 @@ const ProductTopDisplay = () => {
   const dispatch = useDispatch()
   const location = useLocation()
   const slider = useRef(null)
-  const bike = location.state
+  const bike = location.state.product
   const wishlistContents = useSelector((state) => state.handleWishlist.wishlistContents)
   const [startPos, setStartPos] = useState(0)
   const [isDragging, setIsDragging] = useState(false)

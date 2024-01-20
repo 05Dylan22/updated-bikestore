@@ -41,7 +41,7 @@ const ShoppingPage = () => {
       {!isLoading ? 
       <>
         <ShoppingSectionHero img={myData?.heroData[heroTerm].img} categoryName={myData?.heroData[heroTerm].category} description={myData?.heroData[heroTerm].description}/>
-        <ShoppingPageProducts data={myData?.allBikes[categoryName]}/>
+        <ShoppingPageProducts data={myData?.allBikes[categoryName]} categoryName={categoryName}/>
       </>
       : <p style={{width: "100vw", height: "100vh", textAlign: "center", fontSize: "32px", marginTop: "200px"}}>Loading...</p>}
     </>

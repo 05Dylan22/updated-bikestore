@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux"
 
 const ProductPage = () => {
   const location = useLocation()
-  const bike = location.state
+  const bike = location.state.product
   const [selectedColor, setSelectedColor] = useState("black")
   const [selectedSize, setSelectedSize] = useState("m")
   const black = useRef(null)
@@ -182,7 +182,7 @@ const ProductPage = () => {
           <p className="item-added-p">Item Added To Cart</p>
           <button onClick={(e) => addBikeToCart(e)} className="add-to-cart"><div></div>Add To Cart</button>
         </div>
-        {<ReviewSection bike={bike}/>}
+        {<ReviewSection bike={bike} categoryName={location.state.categoryName} index={location.state.index}/>}
       </>
   )
 }

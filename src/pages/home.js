@@ -2,13 +2,18 @@ import "../styles/home.css"
 import ScrollingBanner from "../elements/scrollingBanner"
 import ShopPopular from "../elements/shopPopular"
 import BlogPost from "../elements/blogPost"
-import { useLayoutEffect } from "react"
+import { useLayoutEffect, useRef } from "react"
 
 const Home = () => {
+  const loaded = useRef(false)
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  document.addEventListener("DOMContentLoaded", () => {
+    loaded.current = true
+  })
   
   return (
     <section className="home-page">
