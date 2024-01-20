@@ -50,7 +50,7 @@ const LeaveReview = () => {
   }
 
   function reviewSubmitted() {
-    
+
   }
   
   return (
@@ -68,7 +68,7 @@ const LeaveReview = () => {
       <input className="write-heading" onInput={(e) => headlineInput(e)} value={headline} name="write-heading" type="text" placeholder="What's most important to know?"/>
       {maxHeadline && <label htmlFor="write-heading" className="max-characters">Max Characters</label>}
       <label className="label-sect" htmlFor="customer-review">Write Your Review:</label>
-      <textarea className="leave-review-textarea" onInput={(e) => reviewInput(e)} placeholder="What did you dislike or like?" name="customer-review" id="customer-review" cols="1" rows="5" maxLength={235}></textarea>
+      <textarea className="leave-review-textarea" value={review} onInput={(e) => reviewInput(e)} placeholder="What did you dislike or like?" name="customer-review" id="customer-review" cols="1" rows="5" maxLength={235}></textarea>
       {maxReview && <label className="max-characters" htmlFor="customer-review">Max Characters</label>}
       <div className="submit-review-div">
         <button onClick={reviewSubmitted} className="leave-review-btn" type="submit">Submit</button>
