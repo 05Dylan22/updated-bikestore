@@ -5,6 +5,7 @@ import { handleIcons } from "../redux/handleIcons"
 import { useDispatch } from "react-redux"
 import ShoppingPageProducts from "../elements/shoppingPageProducts"
 import ShoppingSectionHero from "../elements/shoppingSectionHero"
+import { ColorRing } from "react-loader-spinner"
 
 
 const ShoppingPage = () => {
@@ -43,7 +44,15 @@ const ShoppingPage = () => {
         <ShoppingSectionHero img={myData?.heroData[heroTerm].img} categoryName={myData?.heroData[heroTerm].category} description={myData?.heroData[heroTerm].description}/>
         <ShoppingPageProducts data={myData?.allBikes[categoryName]} categoryName={categoryName}/>
       </>
-      : <p style={{width: "100vw", height: "100vh", textAlign: "center", fontSize: "32px", marginTop: "200px"}}>Loading...</p>}
+      : <ColorRing
+      visible={true}
+      height="80"
+      width="80"
+      ariaLabel="color-ring-loading"
+      wrapperStyle={{}}
+      wrapperClass="color-ring-wrapper"
+      colors={['black']}
+    />}
     </>
   )
 }

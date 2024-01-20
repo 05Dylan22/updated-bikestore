@@ -15,6 +15,20 @@ const FilledCart = () => {
     return total.toLocaleString("en-US", {minimumFractionDigits: 2})
   }
 
+  function handleCheckout() {
+    fetch("http://localhost:5000/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    }).then(({ url }) => {
+      window.location = url
+    })
+  }
+
   const displayableTotal = totalPrice.toLocaleString("en-US", {minimumFractionDigits: 2})
 
   return (
@@ -28,7 +42,7 @@ const FilledCart = () => {
           <p className="cart-total-item">Taxes: ${findTaxes(totalPrice)}</p>
           <p className="cart-subtotal">Subtotal: ${displayableTotal}</p>
         </div>
-        <button className="cart-checkout">Checkout <span>&rarr;</span></button>
+          <button onClick={handleCheckout} className="cart-checkout">Checkout <span>&rarr;</span></button>
       </div>
     </>
   )
