@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+This project is an E-commerce bike store and is an updated version of the first one I created with vanilla JavaScript.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Technologies Used
 
-In the project directory, you can run:
+This website uses react.js and CSS on the front end to display a stylish website with interactivity. It also uses redux toolkit and react-router to manage complex state and to create seamless navigation across several pages.
 
-### `npm start`
+In the backend, this site uses node.js, express, and stripe to create a backend that is able to return JSON data from a seperate file back to the front end and to send the customers filled cart to stripe to handle payment.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Biggest Challenge
 
-### `npm test`
+In building this website the biggest challenge I faced was handling the complex state needed to handle the wishlist and cart variable across a handful of files.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Initially I attempted simply using react's useState and passing the variable as props to the other files. This however did not work and I next tried using useContext paired with useReducer.
 
-### `npm run build`
+This worked better than useState alone however there were still bugs appearing. Then I found redux toolkit and with a quick lesson in how to use it I had managed to create a few slices which were now able to handle the complex state with ease.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+What I Learned From This
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Finding ways to handle the sites complex state taught me a lot about ways to manage state in react like useState, useReducer, useContext, and finally reduc toolkit.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Learning more about these methods also taught me a lot about when to consider using each of these methods.
