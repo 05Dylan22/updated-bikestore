@@ -103,6 +103,7 @@
   border: 1px solid black;
   margin: auto;
   border-radius: 6px;
+  margin-bottom: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;

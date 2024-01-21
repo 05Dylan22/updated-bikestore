@@ -14,13 +14,23 @@ const FilledCart = () => {
     total = total * 0.08
     return total.toLocaleString("en-US", {minimumFractionDigits: 2})
   }
+  
+  const keysForMap = Object.keys(cartContents)
 
-  function handleCheckout() {
-    fetch("http://localhost:5000/create-checkout-session", {
+  const sendBody = keysForMap.map((testCartItem) => {
+    return {
+      bikeName: testCartItem,
+      quantity: quantities[testCartItem]
+    }
+  })
+
+  async function handleCheckout() {
+    await fetch("http://localhost:5000/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
-      }
+      },
+      body: JSON.stringify(sendBody)
     }).then(res => {
       if (res.ok) return res.json()
       return res.json().then(json => Promise.reject(json))
