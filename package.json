@@ -40,11 +40,11 @@
       "not dead",
       "not op_mini all"
     ],
+      "devDependencies": "@babel/plugin-proposal-private-property-in-object",
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version",
-      "@babel/plugin-proposal-private-property-in-object"
+      "last 1 safari version"
     ]
   }
 }
