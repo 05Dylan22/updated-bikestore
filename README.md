@@ -1,7 +1,7 @@
 This project is an E-commerce bike store and is an updated version of the first one I created with vanilla JavaScript.
 
 
-TECHNOLOGIES USES
+TECHNOLOGIES USED
 
 This website uses react.js and CSS on the front end to display a stylish website with interactivity. It also uses redux toolkit and react-router to manage complex state and to create seamless navigation across several pages.
 
