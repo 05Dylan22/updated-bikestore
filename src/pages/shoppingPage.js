@@ -13,8 +13,8 @@ const ShoppingPage = () => {
   const [myData, setMyData] = useState()
   const [isLoading, setIsLoading] = useState(true)
   const location = useLocation()
-  const heroTerm = location.state.heroTerm
-  const categoryName = location.state.categoryName
+  const heroTerm = location.state.product.heroTerm
+  const categoryName = location.state.product.categoryName
 
   useEffect(() => {
     dispatch(handleIcons({type: "close"}))
