@@ -55,7 +55,7 @@ const SearchPage = () => {
       </div>
       <div className="search-list-div">
         <ul className="search-list">
-          {matchedTerms.map((result) => <Link key={result.term} state={{product: result.state}} to={result.sendTo} className="search-list-item"><li className="search-item-text">{result.term}</li></Link>)}
+          {matchedTerms.map((result) => <Link key={result.term} state={result.sendTo === "/productPage" ? {product: result.state} : {heroTerm: result.state.heroTerm, categoryName: result.state.categoryName}} to={result.sendTo} className="search-list-item"><li className="search-item-text">{result.term}</li></Link>)}
         </ul>
       </div>
     </div>
