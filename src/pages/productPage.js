@@ -26,11 +26,11 @@ const ProductPage = () => {
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
+  }, [bike])
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  })
+  }, [])
 
   const totalRating = bike?.reviews.reduce((totalStars, review) => {
     return totalStars += review.rating
