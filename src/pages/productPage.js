@@ -28,6 +28,10 @@ const ProductPage = () => {
     window.scrollTo(0, 0)
   }, [])
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
+
   const totalRating = bike?.reviews.reduce((totalStars, review) => {
     return totalStars += review.rating
   }, 0)
