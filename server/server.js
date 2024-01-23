@@ -53,8 +53,7 @@ app.get("/reviewPage", (req, res) => {
     if (err) return err
     data = JSON.parse(data)
     const review = JSON.parse(req.query.review)
-    console.log(req.query.categoryName)
-    console.log(req.query.index)
+    review.rating = Number(review.rating)
     data.allBikes[req.query.categoryName][req.query.index].reviews.push(review)
     data = JSON.stringify(data)
     fs.writeFileSync("./data/data.json", data)

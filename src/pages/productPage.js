@@ -67,7 +67,7 @@ const ProductPage = () => {
 
     dispatch(handleIcons({type: "close"}))
     coverStars.current.style.width = `${widthsForShowingStars[avgRating]}px`
-  })
+  }, [bike, coverStars, avgRating, dispatch])
 
   function animateItemAdded(e) {
     e.target.disabled = true

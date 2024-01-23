@@ -26,10 +26,14 @@ const ProductTopDisplay = () => {
   }, [wishlistContents, bike.name])
 
   useEffect(() => {
+    setCurrentIndex(0)
+  }, [bike])
+
+  useEffect(() => {
     const dots = Array.from(document.getElementsByClassName("slider-dot"))
     if (dots.length > 0) dots[currentIndex].classList.toggle("active-dot")
     slider.current.style.transform = `translateX(${currentIndex * -window.innerWidth}px)`
-  }, [currentIndex])
+  }, [currentIndex, bike])
 
   function forwardOneProduct() {
     const dots = Array.from(document.getElementsByClassName("slider-dot"))
