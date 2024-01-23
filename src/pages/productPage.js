@@ -164,7 +164,7 @@ const ProductPage = () => {
                 <p className="product-review-star">&#11088;</p>
                 <p className="product-review-star">&#11088;</p>
               </div>
-              <p className="product-page-reviews">{isNaN(showRating) ? 5 : showRating.toFixed(1)} out of 5 stars | {bike.reviews.length} reviews</p>
+              <p className="product-page-reviews">{isNaN(showRating) ? "5.0" : showRating.toFixed(1)} out of 5 stars | {bike.reviews.length} reviews</p>
             </div>
             <p className="product-page-price">${bike.price}</p>
           </div>
