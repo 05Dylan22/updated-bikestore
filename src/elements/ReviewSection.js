@@ -1,13 +1,18 @@
 import "../styles/reviewSect.css"
 import Review from "./Review"
 import RatingBars from "./RatingBars"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom"
 
 const ReviewSection = ({bike, categoryName, index}) => {
   const reviewSet = useRef([])
   const [displayReviewSet, setDisplayReviewSect] = useState([])
   const [firstLoad, setFirstLoad] = useState(true)
+
+  useEffect(() => {
+    reviewSet.current = []
+    setFirstLoad(true)
+  }, [reviewSet, bike])
 
   if (firstLoad) {
     showReviews()

@@ -38,7 +38,6 @@ const Review = ({review}) => {
       <div>
         <p className="reviewer-info">Submitted By: {review.name}</p>
         <p className="reviewer-info">From: {review.location}</p>
-        <p className="reviewer-info">1 Month Ago</p>
       </div>
       <p className="reviewer-text">{review.review}</p>
       <div className="upvote-downvote-div">
