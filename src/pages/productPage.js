@@ -62,11 +62,15 @@ const ProductPage = () => {
       "4.25": 20.721875,
       "4.50": 16.48125,
       "4.75": 12.240625,
-      "5.00": 0
+      "5.00": 0,
+      "NaN": 0
     }
 
-    dispatch(handleIcons({type: "close"}))
     coverStars.current.style.width = `${widthsForShowingStars[avgRating]}px`
+  })
+
+  useEffect(() => {
+    dispatch(handleIcons({type: "close"}))
   }, [bike, coverStars, avgRating, dispatch])
 
   function animateItemAdded(e) {
