@@ -26,6 +26,9 @@ const ProductTopDisplay = () => {
   }, [wishlistContents, bike.name])
 
   useEffect(() => {
+    const dots = Array.from(document.getElementsByClassName("slider-dot"))
+    dots[1].classList.remove("active-dot")
+    dots[2].classList.remove("active-dot")
     setCurrentIndex(0)
   }, [bike])
 
@@ -33,7 +36,7 @@ const ProductTopDisplay = () => {
     const dots = Array.from(document.getElementsByClassName("slider-dot"))
     if (dots.length > 0) dots[currentIndex].classList.toggle("active-dot")
     slider.current.style.transform = `translateX(${currentIndex * -window.innerWidth}px)`
-  }, [currentIndex, bike])
+  }, [currentIndex])
 
   function forwardOneProduct() {
     const dots = Array.from(document.getElementsByClassName("slider-dot"))
